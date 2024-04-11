@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+{%block title %} <title>Register</title> {% endblock %} 
+{% block content %}
+<section class="form-container">
+
+   <form action="" method="post" enctype="multipart/form-data">
+
+      {% csrf_token %}
+      {% if form.errors %}
+  <div class="alert alert-danger alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div id="form_errors">
+      {% for key, value in form.errors.items %}
+        <strong>{{ value }}</strong>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+      <h3>register now</h3>
+      <p>Username <span>*</span></p>
+      {{form.username}}
+      <p>First Name <span>*</span></p>
+      {{ form.first_name }}
+      <p>Last Name <span>*</span></p>
+      {{ form.last_name }}
+      <p>your email <span>*</span></p>
+      {{ form.email }}
+      <p>your password <span>*</span></p>
+      {{ form.password1}}
+      {{ form.errors.password }}
+      <p>confirm password <span>*</span></p>
+      {{form.password2}}
+      <!-- <p>select profile <span>*</span></p>
+      <input type="file" accept="image/*" required class="box"> -->
+      <input type="submit" value="register new" name="submit" class="btn">
+   </form>
+
+</section>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% block footer %}
+<footer class="footer">
+
+   &copy; copyright @ 2022 by <span>mr. web designer</span> | all rights reserved!
+
+</footer>
+
+{% endblock %}

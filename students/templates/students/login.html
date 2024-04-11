@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+
+{%block title %} <title>Login</title> {% endblock %} 
+{% block content %}
+
+<section class="form-container">
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% if form.errors %}
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+            <div id="form_errors">
+                {% for key, value in form.errors.items %}
+                <strong>{{ value }}</strong>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        <h3>login now</h3>
+        <a href="{% url 'social:begin' 'github' %}" class="btn btn-link btn-lg active btn-block">Sign in with GitHub</a>
+        <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-link btn-lg active btn-block">Sign in with Google</a>
+        <hr>
+        <p style="text-align: center; margin-top: 20px;"><strong>OR</strong></p>
+        <hr>
+        <p>Username <span>*</span></p>
+        {{form.username}}
+        <p>Password <span>*</span></p>
+        {{form.password}}
+        <div class="form-row">
+            <div class="col-md-10 offset-md-1">
+                <div class="form-group">
+                    {{ form.remember_me }}
+                    <label class="ara3hunna"> Remember me </label>
+                </div>
+            </div>
+        </div>
+
+        <div class=" remember-field ">  
+            <a href="{% url 'register' %}" class="ara4matic">Don't have an account yet? Go to signup</a>
+            <a href="#" class=""><i>Forgot Password?</i></a>
+        </div>
+
+        <input type="submit" value="Sign In" name="submit" class="btn btn-primary btn-block">
+    </form>
+</section>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+{% block footer %}
+
+<footer class="footer">
+
+   &copy; copyright @ 2022 by <span>mr. web designer</span> | all rights reserved!
+
+</footer>
+{% endblock %}
