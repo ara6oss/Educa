@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-+4xmn-$tuf@83vwkvlxwx8hi%sc(6&sif9h%c^k-oic#cyzu*m"
+SECRET_KEY = str(os.getenv('secret_key'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -151,8 +154,18 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-SOCIAL_AUTH_GITHUB_KEY = 'fb38214200407aeecee7'
+SOCIAL_AUTH_GITHUB_KEY = os.getenv('public_key_github')
+SOCIAL_AUTH_GITHUB_SECRET = os.getenv('secret_key_github')
 
 # social auth configs for google
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '1011032861430-h5kk5j6jophocqo73uttg7tchgluna00.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.getenv('public_key_google')
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.getenv('secret_key_google')
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_USE_SSL = True
+EMAIL_USE_TLS = False
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'armangaziz1337@yandex.ru'
+DEFAULT_FROM_EMAIL = 'armangaziz1337@yandex.ru'
+EMAIL_HOST_PASSWORD = 'hlzsuvrlcitinvqn'

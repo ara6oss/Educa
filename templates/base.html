@@ -20,7 +20,7 @@
    
    <section class="flex">
 
-      <a href="home.html" class="logo">Educa.</a>
+      <a href="{% url 'home' %}" class="logo">Educa.</a>
 
       <form action="search.html" method="post" class="search-form">
          <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
@@ -65,7 +65,7 @@
       <img src="{{ user.profile.image.url }}" class="image" alt="">
       <h3 class="name">{{user.first_name}} {{user.last_name}}</h3>
       <p class="role">studen1</p>
-      <a href="profile.html" class="btn">view profile</a>
+      <a href="{% url 'profile' %}" class="btn">view profile</a>
    </div>
 
    {% endif %}
