@@ -40,8 +40,7 @@ def profile(request):
     return render(request, 'students/profile.html')
 
 
-def home(request):
-    return render(request, 'home.html')
+
 
 class RegisterView(View):
     form_class = RegisterForm

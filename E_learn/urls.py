@@ -20,24 +20,27 @@ from django.contrib import admin
 from django.urls import include, path
 from django.contrib.auth import views as auth_views
 
-from students import views
-
+from students.views import *
+from lessons.views import *
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", views.home, name='home'),
-    path("register/", views.RegisterView.as_view(), name='register'),
-    path("login/", views.CustomLoginView.as_view(), name='login'),
+    path("", home, name='home'),
+    path("register/", RegisterView.as_view(), name='register'),
+    path("login/", CustomLoginView.as_view(), name='login'),
     path("logout/", auth_views.LogoutView.as_view(template_name='students/logout.html'), name='logout'),
     path('social-auth/', include('social_django.urls', namespace='social')),
-    path('profile/', views.profile, name='profile'),
-    path('password-reset/', views.ResetPasswordView.as_view(), name='password_reset'),
+    path('profile/', profile, name='profile'),
+    path('password-reset/', ResetPasswordView.as_view(), name='password_reset'),
     path('password-reset-confirm/<uidb64>/<token>/',
          auth_views.PasswordResetConfirmView.as_view(template_name='students/password_reset_confirm.html'),
          name='password_reset_confirm'),
     path('password-reset-complete/',
          auth_views.PasswordResetCompleteView.as_view(template_name='students/password_reset_complete.html'),
          name='password_reset_complete'),
-    path('profile/update/', views.update_profile, name='update_profile'),
-    path('password-change/', views.ChangePasswordView.as_view(), name='password_change'),
+    path('profile/update/', update_profile, name='update_profile'),
+    path('password-change/', ChangePasswordView.as_view(), name='password_change'),
+    
+    path('lesson/', include('lessons.urls', namespace='lesson')),
+    
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

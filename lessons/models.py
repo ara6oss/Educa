@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from .fields import OrderField
+from PIL import Image
 # Create your models here.
 
 class Category(models.Model):
@@ -13,12 +14,13 @@ class Category(models.Model):
 
         ordering = ['title']
         
-        def __str__(self) -> str:
-            return self.title
+    def __str__(self):
+        return self.title
         
 class Lesson(models.Model):
     owner = models.ForeignKey(User, related_name="lesson_created", on_delete=models.CASCADE, verbose_name="Владелец")
     title = models.CharField(max_length=250, verbose_name="Название")
+    image = models.ImageField(upload_to='images/', verbose_name="Картинка")
     category = models.ForeignKey(Category, on_delete=models.CASCADE,  related_name="lesson", verbose_name='Категория')
     overview = models.TextField()
     slug = models.SlugField(max_length=200, unique=True, verbose_name="Ссылка")
@@ -27,11 +29,22 @@ class Lesson(models.Model):
     class Meta:
         ordering = ['-created']
         
-        verbose_name = "Урок"
-        verbose_name_plural = "Уроки"
+        verbose_name = "Курс"
+        verbose_name_plural = "Курсы"
 
     def __str__(self):
         return self.title
+    
+        
+    # def save(self, *args, **kwargs):
+    #     super().save()
+
+    #     img = Image.open(self.image.path)
+
+    #     if img.height > 100 or img.width > 100:
+    #         new_img = (100, 100)
+    #         img.thumbnail(new_img)
+    #         img.save(self.image.path)
     
 
 #         @admin.register(Subject)  админка
@@ -68,4 +81,6 @@ class Content(models.Model):
     class Meta:
         verbose_name = "Контент"
         verbose_name_plural = "Контенты"
+        
+        
     
