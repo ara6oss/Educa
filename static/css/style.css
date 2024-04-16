@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
 
+.flexerara {
+   display: flex;
+   justify-content: space-around;
+}
+
+
 .ara4matic {
    color: #8e44ad;
 }
@@ -655,7 +661,7 @@ section{
 
 .playlist-details .row{
    display: flex;
-   align-items: flex-end;
+   align-items: flex-start;
    gap:3rem;
    flex-wrap: wrap;
    background-color: var(--white);
@@ -702,6 +708,7 @@ section{
 
 .playlist-details .row .column .thumb{
    position: relative;
+   
 }
 
 .playlist-details .row .column .thumb span{
@@ -754,7 +761,7 @@ section{
 
 .playlist-details .row .column .details p{
    padding: 1rem 0;
-   line-height: 2;
+   line-height: 1.5;
    font-size: 1.8rem;
    color: var(--light-color);
 }

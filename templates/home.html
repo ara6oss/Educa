@@ -24,7 +24,7 @@
          <h3 class="title">top categories</h3>
          <div class="flex">
             {% for category in categories %}
-            <a href="{#}"><span>{{category.title}}</span></a>
+            <a href="{% url "lesson:index" category.slug %}"><span>{{category.title}}</span></a>
             {% endfor %}
          </div>
       </div>
@@ -73,11 +73,11 @@
             </div>
          </div>
          <div class="thumb">
-            <img src="{{ lesson.image.url }}" alt="">
+            <a href="{% url "lesson:course_detail" lesson.slug %}"><img src="{{ lesson.image.url }}" alt=""></a>
             <span>10 videos</span>
          </div>
          <h3 class="title">{{lesson.title}}</h3>
-         <a href="playlist.html" class="inline-btn">view playlist</a>
+         <a href="{% url "lesson:course_detail" lesson.slug %}" class="inline-btn">view playlist</a>
       </div>
 
       
