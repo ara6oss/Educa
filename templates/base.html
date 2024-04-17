@@ -36,7 +36,7 @@
 
       <div class="profile">
          {% if user.is_authenticated %}
-         <img src="{{ user.profile.image.url }}" class="image" alt="">
+         <a href="{% url 'profile' %}"><img src="{{ user.profile.image.url }}" class="image" alt=""></a>
          <h3 class="name">{{user.first_name}} {{user.last_name}}</h3>
          <p class="role">studen</p>
          <a href="{% url 'profile' %}" class="btn">view profile</a>
@@ -62,7 +62,7 @@
    </div>
    {% if user.is_authenticated %}
    <div class="profile">
-      <img src="{{ user.profile.image.url }}" class="image" alt="">
+      <a href="{% url 'profile' %}"><img src="{{ user.profile.image.url }}" class="image" alt=""></a>
       <h3 class="name">{{user.first_name}} {{user.last_name}}</h3>
       <p class="role">studen1</p>
       <a href="{% url 'profile' %}" class="btn">view profile</a>

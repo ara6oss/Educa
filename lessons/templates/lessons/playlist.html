@@ -31,14 +31,13 @@
                <h3>{{lesson.owner.first_name}} {{lesson.owner.last_name}}</h3>
                <span>{{lesson.owner}}</span>
                <br>
-               <span>21-10-2022</span>
+               <span>{{lesson.created}}</span>
             </div>
          </div>
    
          <div class="details">
             <h3>{{lesson.title}}</h3>
-            <p>{{lesson.overview|linebreaksbr}}</p>
-            
+            <p>{{lesson.overview|safe}}</p> <!-- |linebreaksbr -->
             <a href="teacher_profile.html" class="inline-btn">view profile</a>
 
          </div>

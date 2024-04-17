@@ -40,6 +40,9 @@ urlpatterns = [
     path('profile/update/', update_profile, name='update_profile'),
     path('password-change/', ChangePasswordView.as_view(), name='password_change'),
     
+    path(r'^ckeditor/', include('ckeditor_uploader.urls')), #ckeditor
+    
+    
     path('lesson/', include('lessons.urls', namespace='lesson')),
     
     

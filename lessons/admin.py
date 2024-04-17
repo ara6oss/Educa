@@ -1,7 +1,7 @@
 from django.contrib import admin
-
+from django import forms
 from lessons.models import Category, Lesson, Module, Content
-
+from ckeditor_uploader.widgets import CKEditorUploadingWidget
 # Register your models here.
 
 
@@ -25,12 +25,23 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ['title', 'slug']
     prepopulated_fields = {"slug": ('title',)}
     
+    
+class OverviewLessonForm(forms.ModelForm):
+    overview = forms.CharField(label='Описание', widget=CKEditorUploadingWidget())
+    
+    class Meta:
+        model = Lesson
+        fields = '__all__'
+    
+
+
 @admin.register(Lesson)
 class LessonAdmin(admin.ModelAdmin):
     list_display = ['title', 'category', 'created']
     list_filter = ['created', 'category']
     search_fields = ['title', 'overview']
     prepopulated_fields = {'slug': ('title',)}
+    form = OverviewLessonForm
     inlines = [ModuleInline]
     
     

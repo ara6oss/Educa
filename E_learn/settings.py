@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     "lessons",
     'sort_order_field',
     'social_django',
+    'ckeditor',
+    'ckeditor_uploader',
     
     
 ]
@@ -135,6 +137,10 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')  #for ckeditor
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
