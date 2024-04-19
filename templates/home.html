@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load lessons_tags %}
 {% block title %} <title>Home</title> {% endblock %} 
 
 {% block content %}
@@ -54,10 +55,21 @@
 
 
 <section class="courses">
-
+   {% if request.GET.q %}
+   <h1 class="heading">Search Results {{request.GET.q}}</h1>
+   {% else %}
    <h1 class="heading">our courses</h1>
+   {% if not lessons %}
+   <h1 class="heading">Nothing was found for the query</h1>
+
+   {% endif %}
+   {% endif %}
+   
 
    <div class="box-container">
+      
+
+
 
    {% for lesson in lessons %}
 
@@ -90,12 +102,38 @@
 
 
 
-
-
  <!-- asdad -->
    <div class="more-btn">
-      <a href="courses.html" class="inline-option-btn">view all courses</a>
+      <div class="pagination-buttons">
+         <!-- <button type="button1" class="page-btn start-page">start</button> -->
+         <!-- <button type="button1" class="page-btn active">1</button> -->
+                   <button type="button1" class="page-btn prev-page">
+                      <p class=" {% if not lessons.has_previous %} disabled {% endif %} ">
+                        <a href="{% if lessons.has_previous %}?{% change_params page=lessons.previous_page_number %}{% else %}#{% endif %}">Prev</a>
+                      </p>
+                   </button>
+                      {% for page in lessons.paginator.page_range %}
+                      {% if page >= lessons.number|add:-2 and page <= lessons.number|add:2 %}
+                      
+                         <button class="page-btn {% if lessons.number == page %} active {% endif %}">
+                            <a class="button1" href="?{% change_params page=page %}">{{page}}</a>
+                         </button>
+                      
+                      {% endif %}
+                      {% endfor %}
+                      
+       
+                      <button type="button1" class="page-btn next-page">
+                         <p class="button1 {% if not lessons.has_next %} disabled {% endif %}">
+                            <a class="button1" href="{% if lessons.has_next %}?{% change_params page=lessons.next_page_number %}{% else %}#{% endif %}">Next</a>
+                         </p>
+                      </button>
+        
+       </div>
    </div>
+
+   
+   
 
 </section>
 

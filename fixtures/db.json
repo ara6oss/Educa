@@ -1,0 +1,2241 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2024-04-08T10:53:34.071Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "Category object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2024-04-08T10:56:31.690Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Установка Linux",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2024-04-08T10:58:09.038Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "1, Модуль Первый",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2024-04-08T10:58:42.438Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "2",
+      "object_repr": "2, Модуль 2",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2024-04-08T10:58:46.398Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "3, Модуль Первый",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2024-04-08T10:58:51.025Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "1, Модуль Первый",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2024-04-08T11:17:42.240Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "Content object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2024-04-08T11:17:47.614Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "Content object (1)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2024-04-08T11:18:44.108Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "Content object (1)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0440\\u0442\\u0438\\u043d\\u043a\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2024-04-08T11:20:21.138Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "Content object (1)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u0430\\u0439\\u043b\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2024-04-08T11:30:33.520Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "1",
+      "object_repr": "armangaziz",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2024-04-10T07:12:06.241Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "1",
+      "object_repr": "armangaziz",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2024-04-10T07:33:32.549Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "2",
+      "object_repr": "ara4matic",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2024-04-10T07:34:48.531Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "2",
+      "object_repr": "ara4matic",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2024-04-10T07:35:39.499Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "2",
+      "object_repr": "ara4matic",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2024-04-10T07:37:02.901Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "2",
+      "object_repr": "ara4matic",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2024-04-11T09:39:08.833Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "1",
+      "object_repr": "armangaziz",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2024-04-12T06:23:46.218Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "11",
+      "object_repr": "ara6oss",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2024-04-15T05:33:17.002Z",
+      "user": 19,
+      "content_type": 4,
+      "object_id": "17",
+      "object_repr": "arabenzo",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2024-04-15T06:47:25.800Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "Category object (2)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2024-04-15T06:47:29.584Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "Category object (1)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2024-04-15T10:23:17.656Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "2",
+      "object_repr": "Анонимность и Безопасность",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2024-04-15T10:32:32.216Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "8",
+      "object_repr": "freebandz",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2024-04-15T11:11:02.757Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "3",
+      "object_repr": "Pentest",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2024-04-15T11:11:08.864Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "4",
+      "object_repr": "Parsing",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2024-04-15T11:11:29.379Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "5",
+      "object_repr": "Black Hat",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2024-04-15T11:11:36.595Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "6",
+      "object_repr": "White Hat",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2024-04-15T11:14:23.637Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "3",
+      "object_repr": "Certified Cyber Threat Intelligence Analyst",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2024-04-15T11:16:03.577Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "4",
+      "object_repr": "Cyber Security and Ethical Hacking introduction course",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2024-04-15T11:23:53.638Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Установка Linux",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0440\\u0442\\u0438\\u043d\\u043a\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2024-04-15T11:24:45.326Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Установка Linux",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0440\\u0442\\u0438\\u043d\\u043a\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2024-04-15T11:25:24.317Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Установка Linux",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0440\\u0442\\u0438\\u043d\\u043a\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2024-04-15T11:26:31.326Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Установка Linux",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0440\\u0442\\u0438\\u043d\\u043a\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2024-04-15T11:30:37.083Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Установка Linux",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0440\\u0442\\u0438\\u043d\\u043a\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2024-04-16T07:08:41.815Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "5",
+      "object_repr": "Pentresting And Penetration",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2024-04-16T07:12:10.237Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "6",
+      "object_repr": "Windows & AD Pentesting - Hands-on Lab Scenarios",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2024-04-16T10:31:47.526Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "2",
+      "object_repr": "Анонимность и Безопасность",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Overview\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2024-04-16T10:32:47.387Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "2",
+      "object_repr": "Анонимность и Безопасность",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Overview\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+      "action_time": "2024-04-17T05:29:51.238Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "7",
+      "object_repr": "The Complete Ethical Hacking Course: Beginner to Advanced!",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+      "action_time": "2024-04-17T05:31:20.069Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "8",
+      "object_repr": "Certified Ethical Hacker (CEH) - Linux Academy's Prep Course",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+      "action_time": "2024-04-17T05:33:27.694Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "9",
+      "object_repr": "Certified WhiteHat Hacker Level 1 ( CWHH Level 1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+      "action_time": "2024-04-17T05:34:45.191Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "9",
+      "object_repr": "asasavage",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+      "action_time": "2024-04-17T05:35:09.903Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "10",
+      "object_repr": "arasavage",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+      "action_time": "2024-04-17T07:46:28.640Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "9",
+      "object_repr": "Certified WhiteHat Hacker Level 1 ( CWHH Level 1)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+      "action_time": "2024-04-17T07:47:12.655Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "9",
+      "object_repr": "Certified WhiteHat Hacker Level 1 ( CWHH Level 1)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+      "action_time": "2024-04-17T07:51:12.993Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "9",
+      "object_repr": "Certified WhiteHat Hacker Level 1 ( CWHH Level 1)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+      "action_time": "2024-04-17T07:52:17.632Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "9",
+      "object_repr": "Certified WhiteHat Hacker Level 1 ( CWHH Level 1)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+      "action_time": "2024-04-17T10:24:01.161Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "8",
+      "object_repr": "Certified Ethical Hacker (CEH) - Linux Academy's Prep Course",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+      "action_time": "2024-04-17T10:32:30.579Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "2",
+      "object_repr": "Анонимность и Безопасность",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+      "action_time": "2024-04-17T10:35:54.035Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "8",
+      "object_repr": "Certified Ethical Hacker (CEH) - Linux Academy's Prep Course",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+      "action_time": "2024-04-17T10:37:08.177Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "8",
+      "object_repr": "Certified Ethical Hacker (CEH) - Linux Academy's Prep Course",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+      "action_time": "2024-04-17T11:58:22.851Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "7",
+      "object_repr": "The Complete Ethical Hacking Course: Beginner to Advanced!",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add Студент",
+      "content_type": 7,
+      "codename": "add_student"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change Студент",
+      "content_type": 7,
+      "codename": "change_student"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete Студент",
+      "content_type": 7,
+      "codename": "delete_student"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view Студент",
+      "content_type": 7,
+      "codename": "view_student"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add Категория",
+      "content_type": 8,
+      "codename": "add_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change Категория",
+      "content_type": 8,
+      "codename": "change_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete Категория",
+      "content_type": 8,
+      "codename": "delete_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view Категория",
+      "content_type": 8,
+      "codename": "view_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add lesson",
+      "content_type": 9,
+      "codename": "add_lesson"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change lesson",
+      "content_type": 9,
+      "codename": "change_lesson"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete lesson",
+      "content_type": 9,
+      "codename": "delete_lesson"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view lesson",
+      "content_type": 9,
+      "codename": "view_lesson"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add module",
+      "content_type": 10,
+      "codename": "add_module"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change module",
+      "content_type": 10,
+      "codename": "change_module"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete module",
+      "content_type": 10,
+      "codename": "delete_module"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view module",
+      "content_type": 10,
+      "codename": "view_module"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add content",
+      "content_type": 11,
+      "codename": "add_content"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change content",
+      "content_type": 11,
+      "codename": "change_content"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete content",
+      "content_type": 11,
+      "codename": "delete_content"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view content",
+      "content_type": 11,
+      "codename": "view_content"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add Студент",
+      "content_type": 12,
+      "codename": "add_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change Студент",
+      "content_type": 12,
+      "codename": "change_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete Студент",
+      "content_type": 12,
+      "codename": "delete_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view Студент",
+      "content_type": 12,
+      "codename": "view_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add association",
+      "content_type": 13,
+      "codename": "add_association"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change association",
+      "content_type": 13,
+      "codename": "change_association"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete association",
+      "content_type": 13,
+      "codename": "delete_association"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view association",
+      "content_type": 13,
+      "codename": "view_association"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add code",
+      "content_type": 14,
+      "codename": "add_code"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change code",
+      "content_type": 14,
+      "codename": "change_code"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete code",
+      "content_type": 14,
+      "codename": "delete_code"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view code",
+      "content_type": 14,
+      "codename": "view_code"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add nonce",
+      "content_type": 15,
+      "codename": "add_nonce"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change nonce",
+      "content_type": 15,
+      "codename": "change_nonce"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete nonce",
+      "content_type": 15,
+      "codename": "delete_nonce"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view nonce",
+      "content_type": 15,
+      "codename": "view_nonce"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add user social auth",
+      "content_type": 16,
+      "codename": "add_usersocialauth"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change user social auth",
+      "content_type": 16,
+      "codename": "change_usersocialauth"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete user social auth",
+      "content_type": 16,
+      "codename": "delete_usersocialauth"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can view user social auth",
+      "content_type": 16,
+      "codename": "view_usersocialauth"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "name": "Can add partial",
+      "content_type": 17,
+      "codename": "add_partial"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "name": "Can change partial",
+      "content_type": 17,
+      "codename": "change_partial"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+      "name": "Can delete partial",
+      "content_type": 17,
+      "codename": "delete_partial"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+      "name": "Can view partial",
+      "content_type": 17,
+      "codename": "view_partial"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$AQuS8gn4SRjDr1rTLR6pBF$j8kb7qKWkTRYeQvocAEziV1Hu8ezrlsYwwe9SVH+9Ds=",
+      "last_login": "2024-04-19T10:42:12.575Z",
+      "is_superuser": true,
+      "username": "armangaziz",
+      "first_name": "Arman",
+      "last_name": "Gaziz",
+      "email": "armangaziz@mail.ru",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-04-08T10:49:26Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$bv63E6t5dJB2UCZJUnSROq$ZPdHcLf5YQbGNSPbhP0YeyoJRcOGsnxEcInh0UiGdZ8=",
+      "last_login": "2024-04-15T05:29:34.503Z",
+      "is_superuser": false,
+      "username": "ara4matic",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-04-09T07:28:17.858Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$sJk98vBqg5JsZYYVcaH96s$i4BziQa8DUb3R3RJUW4RoB/MMt/isOkZgeOdp5dl5zo=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "arasavage",
+      "first_name": "Savage",
+      "last_name": "21",
+      "email": "savage@mail.ru",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-04-09T07:34:25.863Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$xUBCpxG9wfNk2JvXKC7Hev$bQS5KKEHHKQCgoRJJJYR8qHnwitRSSWCFmSOVKY0QTw=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "ar2asavage",
+      "first_name": "Savage",
+      "last_name": "21",
+      "email": "savage@mail.ru",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-04-09T10:14:28.771Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$wzt5aTMSItDA6EvEAdVeT2$NN6TfVhC6wBRoXFxQdI4TbkaBJ16KrN+oyLc7Y2mJ48=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "asasavage",
+      "first_name": "sdasd",
+      "last_name": "wdasd",
+      "email": "Asset.ask01@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-04-09T10:24:28.132Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$qEtwGU8SRX6IGenoXYvKh0$8ogZH1CHBUZlW8cQl7QZz+eYtNtKkNeGCX+Fq1ZF8eE=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "12312124",
+      "first_name": "aaaaaaaaaaaaa",
+      "last_name": "bbbbbbbbbbbbb",
+      "email": "nikolasorwcon@hotmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-04-09T10:26:37.352Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$iV6RCRlgjHBI6B8Z83PMx9$4kavfroJUcMZb7WPSxHWQIW/JyQ/1X7Gd9F2SWNPspM=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "919191",
+      "first_name": "aaaaaaaaaaaaa",
+      "last_name": "bbbbbbbbbbbbb",
+      "email": "savage@mail.ru",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-04-09T10:32:27.170Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$xTLZqd3KXq5reYCYW02fOo$ILh6mxUd5O1x47IEgkINNSga3ajWrReUupkvEz4k7mk=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "aasdad",
+      "first_name": "Savage",
+      "last_name": "bbbbbbbbbbbbb",
+      "email": "Asset.ask01@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-04-09T10:42:05.642Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$mlmf4GIhEUumnu16TGBaFJ$riyqUQ3CT/JXsgjYKjUs+hz1AIwouqGVaNpc2ziFmYg=",
+      "last_login": "2024-04-15T10:36:13.031Z",
+      "is_superuser": false,
+      "username": "freebandz",
+      "first_name": "Arman",
+      "last_name": "Gaziz",
+      "email": "armangaziz123@mail.ru",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-04-10T08:18:54.206Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$pAFnVkyoAuG7pfR5bnAVKd$Psg4ncWYzfz2iz6040Sxr/011k7BxYldFNAu17cPToU=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "asdasd",
+      "first_name": "dsaffasf",
+      "last_name": "safafasg",
+      "email": "armangaziz123@mail.ru",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-04-10T08:22:30.446Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 12,
+    "fields": {
+      "password": "!xl4WbUqcjkdnkjl8JTU961BGNe7jV0Z9zLWOwBdL",
+      "last_login": "2024-04-11T05:30:31.392Z",
+      "is_superuser": false,
+      "username": "detsel7777",
+      "first_name": "NLOskar",
+      "last_name": "",
+      "email": "detsel7777@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-04-11T05:30:31.310Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 13,
+    "fields": {
+      "password": "!5vsYfReQCj5aME4JzqelDSUh8BycWZxPeYqCaVYi",
+      "last_login": "2024-04-11T07:36:43.739Z",
+      "is_superuser": false,
+      "username": "greekbookhero",
+      "first_name": "greekbookhero",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-04-11T07:36:43.699Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 14,
+    "fields": {
+      "password": "!vTdBhNuG104tMrqI5pHgHjREqz6qxfOelmOL26EZ",
+      "last_login": "2024-04-12T10:15:47.275Z",
+      "is_superuser": false,
+      "username": "ara6oss",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-04-12T06:24:00.143Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 15,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$bfScbUYuUU9wvPRTCvYP8l$+02Na0yHwnOY7hLB/P4+Z2PbgUwK+XvVoBXCESgT8V8=",
+      "last_login": "2024-04-12T06:32:06.320Z",
+      "is_superuser": false,
+      "username": "benzo",
+      "first_name": "Mercsedes",
+      "last_name": "Benz",
+      "email": "armangaziz123@mail.ru",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-04-12T06:31:51.894Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 16,
+    "fields": {
+      "password": "!aWAe4aWVNU0Wr2MhoIhp8h3Abm93eYGQrkYLpb0K",
+      "last_login": "2024-04-12T11:58:21.782Z",
+      "is_superuser": false,
+      "username": "asylgaziz",
+      "first_name": "Assyl",
+      "last_name": "Gaziz",
+      "email": "asylgaziz@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-04-12T10:14:41.853Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 17,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$jZVdE5W25lrmz4cp0mSGLY$OLkvMLy94ZWWaZyjGmiP/u1Xre2xnI+hyVtEr/VMj6w=",
+      "last_login": "2024-04-12T10:32:56Z",
+      "is_superuser": false,
+      "username": "arabenzo",
+      "first_name": "Arman",
+      "last_name": "21",
+      "email": "armangaziz12@mail.ru",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-04-12T10:24:51Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 18,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$1hzQSeCIQ0JD4ffgfRck39$YO1ZfHGnyNpcH7EMuo9cNv1FbjIL9Ly03s/oc5IP3Ms=",
+      "last_login": "2024-04-12T11:09:38.887Z",
+      "is_superuser": false,
+      "username": "pupsik133733s",
+      "first_name": "Arman",
+      "last_name": "Gazizza",
+      "email": "as@mail.ru",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-04-12T11:09:27.173Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 19,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$BRLaMruQLeDLimf2ix7tzt$meHNaFAdg8towO2IeXX41RiXN9hpVXaLueJ851wLFKw=",
+      "last_login": "2024-04-15T05:32:53.174Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "Admin",
+      "last_name": "Adminov",
+      "email": "admin@mail.ru",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-04-15T05:28:04.090Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": { "app_label": "admin", "model": "logentry" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": { "app_label": "auth", "model": "permission" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": { "app_label": "auth", "model": "group" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": { "app_label": "auth", "model": "user" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": { "app_label": "contenttypes", "model": "contenttype" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": { "app_label": "sessions", "model": "session" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": { "app_label": "students", "model": "student" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": { "app_label": "lessons", "model": "category" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": { "app_label": "lessons", "model": "lesson" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": { "app_label": "lessons", "model": "module" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": { "app_label": "lessons", "model": "content" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": { "app_label": "students", "model": "profile" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": { "app_label": "social_django", "model": "association" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": { "app_label": "social_django", "model": "code" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": { "app_label": "social_django", "model": "nonce" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": { "app_label": "social_django", "model": "usersocialauth" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": { "app_label": "social_django", "model": "partial" }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "1nmlzcudo20wy2ihix24hpz2kzzumbdv",
+    "fields": {
+      "session_data": "eyJnb29nbGUtb2F1dGgyX3N0YXRlIjoiVGl6czZROU9kRDNjeHo3TUV4bW0wcTdwNVpBalFuWnciLCJnaXRodWJfc3RhdGUiOiJGcE5xN05hTjdEWWQ3WHFBYTMxa01kVnFaUmdtWWpBWSJ9:1rvDuv:sfCHfNO9eksH7kenI0PzttV6-R245hzPPluU8BUooMI",
+      "expire_date": "2024-05-12T10:13:57.086Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "2acq2zk9y1z4rr6klgqnyfak2k4n0jis",
+    "fields": {
+      "session_data": ".eJxVjMEKwjAQRP8lZwnZ2pSmR-9-Q9h0d21UEklaUMR_t4VeehvmvZmv8pVrjTl5fr9i-ajBnJTHZZ78Urn4SGpQoA5dwPHBaQN0x3TLesxpLjHoTdE7rfqaiZ-X3T0cTFindW2x7awzgSQ4lMC9YDCGyFrgc-ssCIDpoEGLQF1ohUSa3vUCazJk1O8PKLA_8Q:1rxkuD:JlHZ6b7YuNiMJQJScfDGLjGGt5sgxAQqWRz_4PyRWvY",
+      "expire_date": "2024-05-19T09:51:41.297Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "3hblcy8say5amk1z2ow4d4dlbqe8ve6e",
+    "fields": {
+      "session_data": ".eJxVjMEKwjAQRP8lZwnZ2pSmR-9-Q9h0d21UEklaUMR_t4VeehvmvZmv8pVrjTl5fr9i-ajBnJTHZZ78Urn4SGpQoA5dwPHBaQN0x3TLesxpLjHoTdE7rfqaiZ-X3T0cTFindW2x7awzgSQ4lMC9YDCGyFrgc-ssCIDpoEGLQF1ohUSa3vUCazJk1O8PKLA_8Q:1rwLbx:K_Q0bg9lCbfSoZlbz7bFEiLWOvJs1-WJrubGItMUXIk",
+      "expire_date": "2024-05-15T12:39:01.737Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "3w84b00i7z037aw0sjjjgtkftpd72gp3",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQRO-yNbLWWfIt6TmDtbY3xIBsZCcSCHF3EilNminmvZkvmCKlhBSNvF8hf2DAExhe5sksRbIJHgbQHRxKy-4hcSP-zvGWlEtxzsGqTVE7LeqavDwvu3s4mLhM6xqdUM_kSYgcIjcVybmlDqt2TbuCvtGjszRyVzWoUbim2re986N2SPD7AyRlPs4:1rvEmo:L1Td8UcMzqkyyt8wbnUcVGIjF4yxJ41jXSv7BHHc6Vw",
+      "expire_date": "2024-05-12T11:09:38.898Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "67n8qajr3d9apck72txnqy9wt99v8615",
+    "fields": {
+      "session_data": ".eJxVjMEKwjAQRP8lZwnZ2pSmR-9-Q9h0d21UEklaUMR_t4VeehvmvZmv8pVrjTl5fr9i-ajBnJTHZZ78Urn4SGpQoA5dwPHBaQN0x3TLesxpLjHoTdE7rfqaiZ-X3T0cTFindW2x7awzgSQ4lMC9YDCGyFrgc-ssCIDpoEGLQF1ohUSa3vUCazJk1O8PKLA_8Q:1rxlh6:bInV2YYhWSwgvOIrH8njC-BrMLneGww7RMnzOsBLxdw",
+      "expire_date": "2024-05-19T10:42:12.586Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "6s440it8ywfspbxii1oqs1jvgpjokp5u",
+    "fields": {
+      "session_data": "eyJnaXRodWJfc3RhdGUiOiJjSjIwck5Ld1pPV0pmUEJDUnJCZmRTOGh3R1BlNUw1MiJ9:1rvDvq:w6N18dEQIJgrVOLQaV1EUoPnKfNoSviZb5A3xjdW77E",
+      "expire_date": "2024-05-12T10:14:54.809Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "cgtqazb5796n6o5cd6jed5v3tklvt4yl",
+    "fields": {
+      "session_data": ".eJxVjEuOwjAQRO_iNYpsSEcxS1iAmOF7Aas73SaGUTLEDgJGc3eCxIZd6b2q-lPHkOqeXEyYRE3VN1VwPchyP7nsIi6-9GMD2wWstmve2Pn-oUbKRYkxtI2T22_o7mqqB4Z9ql0fpXOBhxujPhhhdZbmJfiEzbHNqrZJXaDsVcneNmbrluVn9u5-HNQY62ENmBdgNbEni56k9EhaMwMYmeQWjDdGF2aMgIYLyj17Py5t6c2QNGv1_wT3SFAf:1rwcfD:McmCVFKgP_yM4_wjSmeCImLqjYG2QmM0QQ6ExM4Vwk4",
+      "expire_date": "2024-05-16T06:51:31.620Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "dd8omeor51o7npr97fkp39pud04z723q",
+    "fields": {
+      "session_data": "eyJnaXRodWJfc3RhdGUiOiJkNFhSdHVhVUZUdWU5QTIzSmhydVA0N2lyZW04MkFJRSJ9:1rvDoX:ByRc3FOuChCNIir3wElPs6nAK6-jyN1uHfuYn2wW_Tk",
+      "expire_date": "2024-05-12T10:07:21.237Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "eg3e4w8p7dmpp4dtjwvrbtys3ieeeoo5",
+    "fields": {
+      "session_data": ".eJxVjMEKwjAQRP8lZwnZ2pSmR-9-Q9h0d21UEklaUMR_t4VeehvmvZmv8pVrjTl5fr9i-ajBnJTHZZ78Urn4SGpQoA5dwPHBaQN0x3TLesxpLjHoTdE7rfqaiZ-X3T0cTFindW2x7awzgSQ4lMC9YDCGyFrgc-ssCIDpoEGLQF1ohUSa3vUCazJk1O8PKLA_8Q:1rxlFk:Len51CyTpUsJc08UcOIxh7nd4XsLZslGKB9XG_uS0fo",
+      "expire_date": "2024-05-19T10:13:56.543Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "fl2ps11kuv6yx7eo8vs84iczfqedbvb2",
+    "fields": {
+      "session_data": "eyJnb29nbGUtb2F1dGgyX3N0YXRlIjoicE1NZU5ncTFQNHFXb2xYMEFWVkV5WkFlU280Zm9QS0YiLCJnaXRodWJfc3RhdGUiOiJlaUpZZjdTbUZrS3dJNldTS0E1dXQ4UFNhQnBRTHN1MyJ9:1rvDok:4at-pXllwnXphqm8nArA1uW_lfsbUTBe_KjxgtoGtTM",
+      "expire_date": "2024-05-12T10:07:34.291Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "iozdbfl3kaeku2hw0dzxz9cj23n4juaj",
+    "fields": {
+      "session_data": "eyJnaXRodWJfc3RhdGUiOiJHdHRReHpsNG9waFl1R0h5eGZCemlNaHI3d2JWbThiUCJ9:1rvDwh:D8z6C2m7GPZY39DVWM4wPN6HacIHlpik7WV9CqrCgP0",
+      "expire_date": "2024-05-12T10:15:47.253Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "j2avd9ht6ep10z2od5zja2bjbck7duiv",
+    "fields": {
+      "session_data": "eyJnaXRodWJfc3RhdGUiOiJxOTZ1Qks1Nlhyem9OWUFzUTZBZExYN3pxdFRnQWhxSiJ9:1rvDuj:VRG2z5yRUjQyzFa9ksS2HRIznCVayNxnwD7nvwbWZwY",
+      "expire_date": "2024-05-12T10:13:45.406Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "jlspqufw5unyoeen2ajdawst2c3e6c5b",
+    "fields": {
+      "session_data": "eyJnb29nbGUtb2F1dGgyX3N0YXRlIjoiQ2g2cXcwdHFZYlM1ZFFBN2JyandkbmloRHRlVDJ1REQifQ:1ruogo:pFPITRvw6n1IJjnxEfracoZzkgCbrxiI6xgApPhsk4s",
+      "expire_date": "2024-05-11T07:17:42.753Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "nde2zubvln7896gpke5xcd4galmc1hxm",
+    "fields": {
+      "session_data": "eyJnb29nbGUtb2F1dGgyX3N0YXRlIjoiUXQwUE9MWGRXUXpvS3E5RDUxWUxwd0diS0YzbzJrSnIiLCJnaXRodWJfc3RhdGUiOiI5Y0pEMVE1bnhqSE91NTQ0d3ZsMDNNRVo3SXhsTVZ5UyJ9:1rwfAO:DqvzSWeO-YZsClYs0PB1P48K0iYaKxKmb9L4ke3VTqQ",
+      "expire_date": "2024-05-16T09:31:52.122Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "q0r0rdeubceej9r9p6szvas3jgy7psk8",
+    "fields": {
+      "session_data": "eyJfc2Vzc2lvbl9leHBpcnkiOjB9:1rwJcm:tod9fZKhToTTfYsEZYjrHz6Qgun7IfOH8nA3XgyOwOg",
+      "expire_date": "2024-05-15T10:31:44.939Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "rwfo9xjkqdmis9otnvpgxri2pawvlaqu",
+    "fields": {
+      "session_data": "eyJnaXRodWJfc3RhdGUiOiJSUnl3eUJia2pFWHJ0SklnNTRHWDZDQjR5OThEdWIxOCJ9:1rvDoU:O7_5BNLU2BGKyEiJapmcv0XGjlian264bRsnJQVFDsc",
+      "expire_date": "2024-05-12T10:07:18.403Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "s7lbw81yu51cyy96p2sc298tz7axvb2c",
+    "fields": {
+      "session_data": ".eJxVjMEOwiAQBf-FsyFAu9D26N1vIMAuFjVgoE00xn_XJr30-mbmfZht1Foq2dLrmeqbTeLErFuX2a6Nqk3IJibZYfMu3ClvAG8uXwsPJS81eb4pfKeNXwrS47y7h4PZtflfg9TKoOhj7w2qQE52OpLyGDyAwg41yhggSIHoKUaBZGiEcQDQg1SGfX8ooz_Q:1rv9m8:BnrVH-tQrfdH-ylA2vbGWeYxcG6RGfvxh6XK3ZErqzU",
+      "expire_date": "2024-05-12T05:48:36.456Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ungsp4i860440b7r5vb6u9p4ou15e96n",
+    "fields": {
+      "session_data": "eyJnaXRodWJfc3RhdGUiOiJIRm13cTVTVVczUjZUcGhCOGN6UVFJQUExZGc1N1ozWiJ9:1rvDv3:bagARLsEBiHqTtI8EvcpLjMxrBtyqjEd9pBbSmizSrc",
+      "expire_date": "2024-05-12T10:14:05.276Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "vptyol8qol8hdjp8lver6fa3wdes1p0k",
+    "fields": {
+      "session_data": "eyJnaXRodWJfc3RhdGUiOiJwYjNtZWhyUWQzbUVueERmMVFMbW9NcVdZb1duenBiOSJ9:1rvDpS:rnd4E5_BOwm39GPuCpr-LHG62DS85Kx3LVUibPjCy3k",
+      "expire_date": "2024-05-12T10:08:18.417Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "w6y6cdicjolvo28lffb2uhn17w5nrm0j",
+    "fields": {
+      "session_data": "eyJfc2Vzc2lvbl9leHBpcnkiOjB9:1rwJcZ:VEwHWzEwlaHUJGDgAvnUKfx0CTiROqpRLiPo0xHpg8I",
+      "expire_date": "2024-05-15T10:31:31.441Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "x8utb4ll5wds8ubedba1o24wu6pmxe4z",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAURO_C2hAgrYhL956B_OF_pGogKe3KeHdt0oVu5703LxVpXUpcu8xxYnVWVh1-N1B6SN0A36nemk6tLvMEvSl6p11fG8vzsrt_B4V6-dbDYMkR4ByDIdmELKMPGG3KyZPx1uQAx0GO5DghkDCLRz45AZjV-wMd4Doz:1rxikN:PZrIotCuxsFJ8v0YXB_EW1sZQ0Po-B82brAq7QXu4IY",
+      "expire_date": "2024-05-19T07:33:23.314Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "xhgxtcvovfvpd87xbdb3wcefwq7rcpv1",
+    "fields": {
+      "session_data": "eyJnaXRodWJfc3RhdGUiOiJzZkc1NXQ4Rm4xbFJsYmxKZ1k2QXlSZjhqekVJaGZkNSJ9:1rvDwC:MA-IDsD1qzdeiq-zGHM8FwCWRxqlQPlnp9yGpJqo2Yc",
+      "expire_date": "2024-05-12T10:15:16.166Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "yf3x4fg4f6kyzaphcewcappb2wg2wj8i",
+    "fields": {
+      "session_data": "eyJfc2Vzc2lvbl9leHBpcnkiOjB9:1rwJcD:Q5QY-l_bzapCJdQttkxWLbcsdTv_hNbjy-pRDN33CMA",
+      "expire_date": "2024-05-15T10:31:09.508Z"
+    }
+  },
+  {
+    "model": "students.profile",
+    "pk": 397,
+    "fields": {
+      "user": 2,
+      "image": "profile_pic/8aa7589c-0dcc-4b66-aa09-f0a7737f9c8f_NDUfdMs.jfif",
+      "bio": "FREEBANDZ!$"
+    }
+  },
+  {
+    "model": "students.profile",
+    "pk": 398,
+    "fields": { "user": 3, "image": "profile_pic/78903.png", "bio": "FREEELO" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 399,
+    "fields": {
+      "user": 4,
+      "image": "profile_pic/8aa7589c-0dcc-4b66-aa09-f0a7737f9c8f.jfif",
+      "bio": "FREEBANDZ YSL !769 !967"
+    }
+  },
+  {
+    "model": "students.profile",
+    "pk": 400,
+    "fields": { "user": 5, "image": "default.jpg", "bio": "" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 401,
+    "fields": { "user": 6, "image": "default.jpg", "bio": "" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 402,
+    "fields": { "user": 7, "image": "default.jpg", "bio": "sss" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 403,
+    "fields": { "user": 8, "image": "default.jpg", "bio": "free" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 404,
+    "fields": {
+      "user": 9,
+      "image": "profile_pic/Когда_лев_голоден_он_ест..png",
+      "bio": "jllkjl"
+    }
+  },
+  {
+    "model": "students.profile",
+    "pk": 405,
+    "fields": {
+      "user": 10,
+      "image": "profile_pic/845f1630-d93f-4e53-9822-60015eb9cb48.jpg",
+      "bio": "peso"
+    }
+  },
+  {
+    "model": "students.profile",
+    "pk": 406,
+    "fields": {
+      "user": 1,
+      "image": "profile_pic/wijaCyoQ0zc.jpg",
+      "bio": "freez"
+    }
+  },
+  {
+    "model": "students.profile",
+    "pk": 407,
+    "fields": { "user": 12, "image": "default.jpg", "bio": "" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 408,
+    "fields": { "user": 13, "image": "default.jpg", "bio": "" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 409,
+    "fields": { "user": 14, "image": "default.jpg", "bio": "" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 410,
+    "fields": { "user": 15, "image": "default.jpg", "bio": "" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 411,
+    "fields": { "user": 16, "image": "default.jpg", "bio": "" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 412,
+    "fields": { "user": 17, "image": "default.jpg", "bio": "" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 413,
+    "fields": { "user": 18, "image": "default.jpg", "bio": "" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 414,
+    "fields": { "user": 19, "image": "default.jpg", "bio": "" }
+  },
+  {
+    "model": "lessons.category",
+    "pk": 1,
+    "fields": { "title": "Cybersecurity", "slug": "cybersecurity" }
+  },
+  {
+    "model": "lessons.category",
+    "pk": 2,
+    "fields": { "title": "Ethical hacking", "slug": "ethical-hacking" }
+  },
+  {
+    "model": "lessons.category",
+    "pk": 3,
+    "fields": { "title": "Pentest", "slug": "pentest" }
+  },
+  {
+    "model": "lessons.category",
+    "pk": 4,
+    "fields": { "title": "Parsing", "slug": "parsing" }
+  },
+  {
+    "model": "lessons.category",
+    "pk": 5,
+    "fields": { "title": "Black Hat", "slug": "black-hat" }
+  },
+  {
+    "model": "lessons.category",
+    "pk": 6,
+    "fields": { "title": "White Hat", "slug": "white-hat" }
+  },
+  {
+    "model": "lessons.lesson",
+    "pk": 1,
+    "fields": {
+      "owner": 1,
+      "title": "Установка Linux",
+      "image": "images/mne7rkrzdxrqc8td0coe_Dpe15Rg.jpg",
+      "category": 1,
+      "overview": "Скачивание\r\n\r\nИтак, вы определились, какую версию Ubuntu будете использовать. Переходим по ссылке для скачивания ubuntu, в поле «Choose your flavour» выбираем 32-битную или 64-битную версию, жмем «Get Ubuntu XX.XX». Возможно после этого вам будет предложено ответить на опрос, но сейчас нас это не интересует, в конце страницы нажимаем «Not now, take me to the download ›»(перевод «Не сейчас, приступить к загрузке >»). После этого откроется страница загрузки и через несколько секунд начнется загрузка. Образ *.iso дистрибутива Ubuntu занимает размер около 700 Мб, поэтому рекомендуется использовать менеджер закачки, для того, что бы можно было докачать образ в случае разрыва соединения.",
+      "slug": "ustanovka-linux",
+      "created": "2024-04-08T10:56:31.682Z",
+      "students": []
+    }
+  },
+  {
+    "model": "lessons.lesson",
+    "pk": 2,
+    "fields": {
+      "owner": 9,
+      "title": "Анонимность и Безопасность",
+      "image": "images/cyber-security-courses.webp",
+      "category": 1,
+      "overview": "<p>На данном интенсиве за 10 часов (!!!) мы разберем такие тамы как - Право на завбвение ( Или как исчезнуть из интернета )</p>\r\n\r\n<p>- Фейковые личности и для чего они нужны</p>\r\n\r\n<p><strong><em>- Правила OPSEC - Приватность Windows 10</em></strong></p>\r\n\r\n<p>- Песочницы Windows - Виды гипервизоров</p>\r\n\r\n<p>- Виды утечек с гостевых машин</p>\r\n\r\n<p>- Whonix занакомство - Другие OS для анонимности и противодействие криминалистическому анализу (Kodachi etc) - Отслеживание и fingerprint - Альтернативные поисковики - Виды 2fa - Password менеджеры - Дисковое шифрование</p>",
+      "slug": "anonimnost-i-bezopasnost",
+      "created": "2024-04-15T10:23:17.652Z",
+      "students": []
+    }
+  },
+  {
+    "model": "lessons.lesson",
+    "pk": 3,
+    "fields": {
+      "owner": 9,
+      "title": "Certified Cyber Threat Intelligence Analyst",
+      "image": "images/feaeefe5-f2bd-409c-b069-8869066894f2.webp",
+      "category": 1,
+      "overview": "7 threat intelligence phases\r\n\r\nHunting - The goal of hunting is to establish techniques to collect samples from different sources that help to start profiling malicious threat actors.\r\n\r\nExtraction -The goal of Features Extraction is to identify unique static features in malware binaries that help classify them into malicious groups.\r\n\r\nBehavior Extraction - Identifies unique dynamic features in binaries that help classify them as malicious.\r\n'Correlation and Clustering' - This method identifies malware based on its behavior and features and uses that information to classify it.\r\n\r\nThreat Actor Attribution - The goal of Threat Actors is to locate the threat actors behind the malicious clusters identified.\r\n\r\nTracking - The goal of tracking is to anticipate new attacks and identify new variants proactively.",
+      "slug": "certified-cyber-threat-intelligence-analyst",
+      "created": "2024-04-15T11:14:23.633Z",
+      "students": []
+    }
+  },
+  {
+    "model": "lessons.lesson",
+    "pk": 4,
+    "fields": {
+      "owner": 9,
+      "title": "Cyber Security and Ethical Hacking introduction course",
+      "image": "images/cybersecurity-adalah.jpg",
+      "category": 1,
+      "overview": "I know you are interested in cyber security and ethical hacking. You guys always searching words like virus, malware, hacking, encryption and many other related works but could not get a satisfactory answer, but don't worry you are at the right place we have a perfect course for you that will teach you all the basic as well as some advanced concept of the cybersecurity and ethical hacking. We will teach all the concept in a fun learning way with many examples.\r\n\r\n*This course is made in such a way that it fits absolutely perfect for you.\r\n\r\n*It doesn't matter if you don't know anything about cyber security and ethical hacking, this course will help you to understand everything from scratch. Even if you know the basics you might still discover so many new things.\r\n\r\nWhat is Cyber Security\r\n\r\n3 Reasons why cyber security is important\r\n\r\n10 reasons to learn cyber security\r\n\r\nWhat is Hacking\r\n\r\nWho is Hacker\r\n\r\nTypes of Hackers\r\n\r\nHow to become a professional hacker\r\n\r\nThe complete road-map of becoming the best Hacker\r\n\r\nSkills required to become a Hacker\r\n\r\nDifferent programming languages & their importance in Cyber Security\r\n\r\nWhy Linux is the best operating system for hacking\r\n\r\nBest Linux distributions for hacking purpose\r\n\r\nBest cyber security certificates to undertake\r\n\r\nWhat is Cyber Attack\r\n\r\nTypes of Cyber Attack\r\n\r\nPhase of hacking\r\n\r\nSo what are you waiting for?????  Enroll now and start your cyber security & ethical hacking career.",
+      "slug": "cyber-security-and-ethical-hacking-introduction-course",
+      "created": "2024-04-15T11:16:03.567Z",
+      "students": []
+    }
+  },
+  {
+    "model": "lessons.lesson",
+    "pk": 5,
+    "fields": {
+      "owner": 1,
+      "title": "Pentresting And Penetration",
+      "image": "images/pentesting.png",
+      "category": 3,
+      "overview": "Mike Meyers and the Total Seminars Team, your source for best-selling cybersecurity courses, brings you this ethical hacking and penetration testing course with your instructor Michael Solomon, Ph.D., CISSP, PMP, CISM. Prepare for the CompTIA PenTest+ PT0-002 exam.\r\n\r\nThis is NOT a boring voice over PowerPoint course. Michael speaks to you and presents the material in an engaging interactive style that will keep you interested and make it easier to understand. Check out the free sample lectures and you will see the difference.",
+      "slug": "pentresting-and-penetration",
+      "created": "2024-04-16T07:08:41.746Z",
+      "students": []
+    }
+  },
+  {
+    "model": "lessons.lesson",
+    "pk": 6,
+    "fields": {
+      "owner": 9,
+      "title": "Windows & AD Pentesting - Hands-on Lab Scenarios",
+      "image": "images/penetration-course-jaipur.png",
+      "category": 3,
+      "overview": "This 2023 course is targeted for Beginner to Intermediate security professionals and enthusiasts who want to learn more about Windows and Active Directory security. Topics covered are 100% Windows related and dive into the full pentesting lifecycle of Windows and Active Directory.\r\n\r\nThe course guides the student through red team and ethical hacking TTP's while showcasing real-world scenarios on a Windows cyber-range which mimics a corporate network. The cyber-range, Kinetic is hosted by SlayerLabs and contains 25 Windows VM's with 5 Domains and 6 subnets all engineered to exploit!",
+      "slug": "windows-ad-pentesting-hands-on-lab-scenarios",
+      "created": "2024-04-16T07:12:10.232Z",
+      "students": []
+    }
+  },
+  {
+    "model": "lessons.lesson",
+    "pk": 7,
+    "fields": {
+      "owner": 19,
+      "title": "The Complete Ethical Hacking Course: Beginner to Advanced!",
+      "image": "images/Ethical-Hacking-Certification-and-Internship_.jpg",
+      "category": 2,
+      "overview": "<p><strong>Gain the ability to do ethical hacking and penetration testing by taking this course!</strong></p>\r\n\r\n<p>Get answers from an experienced IT expert to every single question you have related to the learning you do in this course including installing Kali Linux, using VirtualBox, basics of Linux, Tor, Proxychains, VPN, Macchanger, Nmap, cracking wifi, aircrack, DoS attacks, SLL strip, known vulnerabilities, SQL injections, cracking Linux passwords, and more topics that are added every month!</p>",
+      "slug": "the-complete-ethical-hacking-course-beginner-to-advanced",
+      "created": "2024-04-17T05:29:51.230Z",
+      "students": []
+    }
+  },
+  {
+    "model": "lessons.lesson",
+    "pk": 8,
+    "fields": {
+      "owner": 3,
+      "title": "Certified Ethical Hacker (CEH) - Linux Academy's Prep Course",
+      "image": "images/maxresdefault.jpg",
+      "category": 2,
+      "overview": "<p>What you&#39;ll learn Welcome to the Certified Ethical Hacker Course! (v10).</p>\r\n\r\n<p>Have you always wanted to learn how to discover the weaknesses and vulnerabilities of a system? Have you always wondered how security professionals protect their systems from intruders? Do you wish to master hacking technologies? If so, then this course is for you. With the rapid development of information technology, almost every industry in the world has some sort of information system installed and greatly depends on it. Such systems bring great value to companies.</p>\r\n\r\n<p><em><strong>However, every system has its weaknesses and vulnerabilities which, if discovered by someone with bad intentions, can cause a lot of damage.</strong></em></p>\r\n\r\n<p>For this reason, it has become imperative to protect these systems and the information they contain. If you wish to learn how you can improve the security of any system, or even if you have some experience working as a security professional and now wish to advance your skills and knowledge, then the CEH certificate will be of great benefit to you and your organization. This course will help you prepare for the exam. You will learn about the tools, methods, and technologies used. The goal of this course is to help you master the topics required for passing the exam and becoming an ethical hacker.</p>\r\n\r\n<p>&nbsp;</p>",
+      "slug": "certified-ethical-hacker-ceh-linux-academys-prep-course",
+      "created": "2024-04-17T05:31:20.056Z",
+      "students": []
+    }
+  },
+  {
+    "model": "lessons.module",
+    "pk": 1,
+    "fields": {
+      "lesson": 1,
+      "title": "Модуль Первый",
+      "description": "Шаг 1 из 8\r\nШаг 1 в графическом мастере установки подразумевает выбор языка для новой операционной системы. Выбрав язык на левой панели, нажмите кнопку «Вперед».\r\n\r\n\r\n\r\nЕсли вы устанавливаете не с DVD, а CD диска, то поддержка русского языка установится не полностью, ничего страшного в этом нет, все решается в течение пяти минут. Как это сделать можно узнать из этой статьи.\r\nШаг 2 из 8\r\nДалее нужно будет выбрать ваш часовой пояс. Можно либо просто щёлкнуть в нужном месте на карте, либо выбрать регион или крупный город, находящийся в вашем часовом поясе. Установив часовой пояс, нажмите кнопку Вперед.\r\n\r\n\r\n\r\nШаг 3 из 8\r\nТретий шаг связан с настройкой клавиатуры. Можно оставить опцию Предлагаемая раскладка или выбрать собственные настройки, указав язык клавиатуры на левой панели и раскладку клавиатуры на правой панели. Определившись с выбором, нажмите кнопку Вперед.\r\n\r\n\r\n\r\nШаг 4 из 8\r\nДанный шаг подразумевает выполнение двух задач: во-первых, подготовка, которая заключается в освобождение места под разделы Linux, а во-вторых, создание разделов Linux.\r\n\r\nРекомендуется прочитать статью о разделах в Linux.\r\nДля начала вам будет предложено несколько опций, в зависимости от того, что в данный момент находится на вашем жёстком диске. Выберите Задать разделы вручную и нажмите Вперед, не обращая внимания на то, что сейчас есть на диске.",
+      "order": 1
+    }
+  },
+  {
+    "model": "lessons.module",
+    "pk": 2,
+    "fields": {
+      "lesson": 1,
+      "title": "Модуль 2",
+      "description": "",
+      "order": 2
+    }
+  },
+  {
+    "model": "lessons.content",
+    "pk": 1,
+    "fields": {
+      "module": 1,
+      "order": 1,
+      "text": "Предупреждение: Настоятельно рекомендуем сделать резервную копию всех важных данных, прежде чем приступать к выполнению шагов данного руководства, особенно если вы хотите установить Ubuntu на тот же самый жёсткий диск, где установлена система Windows. И это не из-за того, что Ubuntu может что-то испортить, а из-за того что зачастую пользователь сам по незнанию выполняет некоторые действия неправильно, отходя от описанных в руководстве. Кроме того, рекомендуем прочитать статью до конца, прежде чем следовать инструкциям. Вам придётся внести изменения в таблицу разделов диска, поэтому возможна потеря данных. Вы должны знать, как записать ISO-образ на CD и как настроить BIOS на загрузку с оптического привода. Кроме того, от вас потребуется знание основ разбиения жёсткого диска на разделы. Если вам нужна альтернативная загрузка Ubuntu и Windows, тогда сначала установите Windows, поскольку при установке Ubuntu раньше Windows вы, наверняка, столкнётесь с проблемами. Если вы не доверяете разметчику, имеющемуся на установочном CD Ubuntu, но это зря, или просто хотите воспользоваться своим собственным решением для разбиения диска на разделы, тогда вам понадобится как минимум 20 Гбайт неразмеченного свободного места для Ubuntu, чтобы следовать нашим инструкциям.",
+      "image": "images/download_4.jpg",
+      "file": "files/Mario.zip",
+      "video": null,
+      "created": "2024-04-08T11:17:42.227Z",
+      "updated": "2024-04-08T11:20:21.135Z"
+    }
+  },
+  {
+    "model": "social_django.usersocialauth",
+    "pk": 2,
+    "fields": {
+      "user": 12,
+      "provider": "google-oauth2",
+      "uid": "detsel7777@gmail.com",
+      "extra_data": {
+        "expires": 3599,
+        "auth_time": 1712813431,
+        "token_type": "Bearer",
+        "access_token": "ya29.a0Ad52N39B18lH6vS2LhGzhIx6ssBJVm-icSV2JTeEoNiK0qttXjA0b5rGPKE7rPnf_clIk-RAucrnKMu1rehLpTBG7AQ9EVXvxfyQeyoO64F1krKDWBk7J8b6khpL6Cks7lpIXCNhL9PlvVlLhI4iyd_3ARVLciEoPgKqaCgYKAdcSARESFQHGX2MicBJWrPiL5Zvrb8fMpyiFcw0171"
+      },
+      "created": "2024-04-11T05:30:31.328Z",
+      "modified": "2024-04-11T05:30:31.343Z"
+    }
+  },
+  {
+    "model": "social_django.usersocialauth",
+    "pk": 3,
+    "fields": {
+      "user": 13,
+      "provider": "github",
+      "uid": "32012362",
+      "extra_data": {
+        "id": 32012362,
+        "login": "greekbookhero",
+        "expires": null,
+        "auth_time": 1712821003,
+        "token_type": "bearer",
+        "access_token": "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"
+      },
+      "created": "2024-04-11T07:36:43.709Z",
+      "modified": "2024-04-11T07:36:43.718Z"
+    }
+  },
+  {
+    "model": "social_django.usersocialauth",
+    "pk": 4,
+    "fields": {
+      "user": 14,
+      "provider": "github",
+      "uid": "96424687",
+      "extra_data": {
+        "id": 96424687,
+        "login": "ara6oss",
+        "expires": null,
+        "auth_time": 1712916947,
+        "token_type": "bearer",
+        "access_token": "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"
+      },
+      "created": "2024-04-12T06:24:00.148Z",
+      "modified": "2024-04-12T10:15:47.236Z"
+    }
+  },
+  {
+    "model": "social_django.usersocialauth",
+    "pk": 5,
+    "fields": {
+      "user": 16,
+      "provider": "google-oauth2",
+      "uid": "asylgaziz@gmail.com",
+      "extra_data": {
+        "expires": 3599,
+        "auth_time": 1712923101,
+        "token_type": "Bearer",
+        "access_token": "ya29.a0Ad52N3-3wRbdqzB3gdGVQxeujxiQ2B9682YtQ_FRyYZs8kSYvcv9owC6SLdHE9cXioOLFJ7jkBfNXtq8OBn8AVXLZ9wDivr_Vz9__yKWFYmWwGmTPVnhrUfEXe72GRjx02VHKKo_vSfiLqgdIJKDWh9gvqToj0_mXgaCgYKAbkSARASFQHGX2MiF4CXtkgI-6mUUR4Jd9Kdxw0169"
+      },
+      "created": "2024-04-12T10:14:42.006Z",
+      "modified": "2024-04-12T11:58:21.749Z"
+    }
+  }
+]

@@ -37,7 +37,7 @@ class OverviewLessonForm(forms.ModelForm):
 
 @admin.register(Lesson)
 class LessonAdmin(admin.ModelAdmin):
-    list_display = ['title', 'category', 'created']
+    list_display = ['title', 'category','owner', 'created']
     list_filter = ['created', 'category']
     search_fields = ['title', 'overview']
     prepopulated_fields = {'slug': ('title',)}

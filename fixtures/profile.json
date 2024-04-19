@@ -1,0 +1,116 @@
+[
+  {
+    "model": "students.profile",
+    "pk": 397,
+    "fields": {
+      "user": 2,
+      "image": "profile_pic/8aa7589c-0dcc-4b66-aa09-f0a7737f9c8f_NDUfdMs.jfif",
+      "bio": "FREEBANDZ!$"
+    }
+  },
+  {
+    "model": "students.profile",
+    "pk": 398,
+    "fields": {
+      "user": 3,
+      "image": "profile_pic/78903.png",
+      "bio": "FREEELO"
+    }
+  },
+  {
+    "model": "students.profile",
+    "pk": 399,
+    "fields": {
+      "user": 4,
+      "image": "profile_pic/8aa7589c-0dcc-4b66-aa09-f0a7737f9c8f.jfif",
+      "bio": "FREEBANDZ YSL !769 !967"
+    }
+  },
+  {
+    "model": "students.profile",
+    "pk": 400,
+    "fields": { "user": 5, "image": "default.jpg", "bio": "" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 401,
+    "fields": { "user": 6, "image": "default.jpg", "bio": "" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 402,
+    "fields": { "user": 7, "image": "default.jpg", "bio": "sss" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 403,
+    "fields": { "user": 8, "image": "default.jpg", "bio": "free" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 404,
+    "fields": {
+      "user": 9,
+      "image": "profile_pic/Когда_лев_голоден_он_ест..png",
+      "bio": "jllkjl"
+    }
+  },
+  {
+    "model": "students.profile",
+    "pk": 405,
+    "fields": {
+      "user": 10,
+      "image": "profile_pic/845f1630-d93f-4e53-9822-60015eb9cb48.jpg",
+      "bio": "peso"
+    }
+  },
+  {
+    "model": "students.profile",
+    "pk": 406,
+    "fields": {
+      "user": 1,
+      "image": "profile_pic/wijaCyoQ0zc.jpg",
+      "bio": "freez"
+    }
+  },
+  {
+    "model": "students.profile",
+    "pk": 407,
+    "fields": { "user": 12, "image": "default.jpg", "bio": "" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 408,
+    "fields": { "user": 13, "image": "default.jpg", "bio": "" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 409,
+    "fields": { "user": 14, "image": "default.jpg", "bio": "" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 410,
+    "fields": { "user": 15, "image": "default.jpg", "bio": "" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 411,
+    "fields": { "user": 16, "image": "default.jpg", "bio": "" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 412,
+    "fields": { "user": 17, "image": "default.jpg", "bio": "" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 413,
+    "fields": { "user": 18, "image": "default.jpg", "bio": "" }
+  },
+  {
+    "model": "students.profile",
+    "pk": 414,
+    "fields": { "user": 19, "image": "default.jpg", "bio": "" }
+  }
+]
