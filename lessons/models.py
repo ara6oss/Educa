@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from .fields import OrderField
 from PIL import Image
+from django.utils import timezone
 # Create your models here.
 
 class Category(models.Model):
@@ -59,7 +60,8 @@ class Module(models.Model):
     description = models.TextField(blank=True, null=True, verbose_name="Описание")
     order = OrderField(blank=True, for_fields=['lesson'])
     slug = models.SlugField(max_length=200, verbose_name="Ссылка")
-    
+    likes = models.ManyToManyField(User, blank=True, related_name='likes')
+    dislikes = models.ManyToManyField(User, blank=True, related_name='dislikes')
     
     class Meta:
         ordering = ['order']
@@ -84,6 +86,25 @@ class Content(models.Model):
     class Meta:
         verbose_name = "Контент"
         verbose_name_plural = "Контенты"
+        
+class Comment(models.Model):
+        comment = models.TextField()
+        created_on = models.DateTimeField(default=timezone.now)
+        author = models.ForeignKey(User, on_delete=models.CASCADE)
+        module = models.ForeignKey('Module', on_delete=models.CASCADE)
+        likes = models.ManyToManyField(User, blank=True, related_name='comment_likes')
+        dislikes = models.ManyToManyField(User, blank=True, related_name='comment_dislikes')
+        parent = models.ForeignKey('self', on_delete=models.CASCADE, blank=True, null=True, related_name='+')
+
+        @property
+        def children(self):
+            return Comment.objects.filter(parent=self).order_by('-created_on').all()
+
+        @property
+        def is_parent(self):
+            if self.parent is None:
+                return True
+            return False
         
         
     

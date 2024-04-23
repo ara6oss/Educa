@@ -12,7 +12,13 @@
       <h3 class="title">{{module.title}}</h3>
       <div class="info">
          <p class="date"><i class="fas fa-calendar"></i><span>{{lesson.created|date:"d-m-Y"}}</span></p>
-         <p class="date"><i class="fas fa-heart"></i><span>44 likes</span></p>
+         <p class="date"><i class="fas fa-heart"></i><span>{{module.likes.all.count}}</span></p>
+
+
+         <!-- <p class="date"><i class="far fa-thumbs-down"></i><span>{{module.dislikes.all.count}}</span></p>
+
+                                          For dislike count -->
+
       </div>
       <div class="tutor">
          <img src="{{lesson.owner.profile.image.url}}" alt="">
@@ -21,10 +27,19 @@
             <span>{{lesson.owner}}</span>
          </div>
       </div>
-      <form action="" method="post" class="flex">
+      <form action="{% url 'lesson:like' course_slug=lesson.slug module_slug=module.slug %}" method="post" class="flex">
+         {% csrf_token %}
          <a href="{% url "lesson:course_detail" lesson.slug %}" class="inline-btn">view playlist</a>
          <button><i class="far fa-heart"></i><span>like</span></button>
       </form>
+
+      <!-- <form action="{% url 'lesson:dislike' course_slug=lesson.slug module_slug=module.slug %}" method="post" class="flex">
+         {% csrf_token %}
+         <button><i class="far fa-thumbs-down"></i><span>dislike</span></button>
+      </form>
+                                          For dislike button -->
+
+      
       <p class="description">
          {{module.description}}
    </div>

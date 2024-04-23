@@ -1,8 +1,11 @@
-from django.shortcuts import get_list_or_404, render
+from django.shortcuts import get_list_or_404, get_object_or_404, render
 from django.core.paginator import Paginator
 from lessons.utils import q_search
 from lessons.models import Lesson, Category, Module
-
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views import View
+from django.http import HttpResponseRedirect
+from django.shortcuts import redirect
 # Create your views here.
 
 # def home (request):
@@ -80,3 +83,79 @@ def module_detail(request, course_slug, module_slug):
     }
     
     return render(request, 'lessons/module.html', context)
+
+class AddLike(LoginRequiredMixin, View):
+    
+    def get(self, request, course_slug, module_slug, *args, **kwargs):
+        lesson = get_object_or_404(Lesson, slug=course_slug)
+        module = get_object_or_404(Module, lesson=lesson, slug=module_slug)
+        context = {
+            'lesson': lesson,
+            'module': module
+        }
+        
+        return render(request, 'lessons/module.html', context)
+    
+    
+    
+    def post(self, request, course_slug, module_slug, *args, **kwargs):
+        lesson = get_object_or_404(Lesson, slug=course_slug)
+        module = get_object_or_404(Module, lesson=lesson, slug=module_slug)
+
+        is_dislike = False
+
+        for dislike in module.dislikes.all():
+            if dislike == request.user:
+                is_dislike = True
+                break
+
+        if is_dislike:
+            module.dislikes.remove(request.user)
+
+        is_like = False
+
+        for like in module.likes.all():
+            if like == request.user:
+                is_like = True
+                break
+
+        if not is_like:
+            module.likes.add(request.user)
+
+        if is_like:
+            module.likes.remove(request.user)
+
+        return redirect(request.META.get('HTTP_REFERER', '/'))
+    
+    
+    
+    
+class AddDislike(LoginRequiredMixin, View):
+    def post(self, request, course_slug, module_slug, *args, **kwargs):
+        lesson = get_object_or_404(Lesson, slug=course_slug)
+        module = get_object_or_404(Module, lesson=lesson, slug=module_slug)
+
+        is_like = False
+
+        for like in module.likes.all():
+            if like == request.user:
+                is_like = True
+                break
+
+        if is_like:
+            module.likes.remove(request.user)
+
+        is_dislike = False
+
+        for dislike in module.dislikes.all():
+            if dislike == request.user:
+                is_dislike = True
+                break
+
+        if not is_dislike:
+            module.dislikes.add(request.user)
+
+        if is_dislike:
+            module.dislikes.remove(request.user)
+
+        return redirect(request.META.get('HTTP_REFERER', '/'))
