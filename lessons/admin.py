@@ -10,7 +10,9 @@ class ContentInline(admin.StackedInline):
 
 @admin.register(Module)
 class ModuleAdmin(admin.ModelAdmin):
+    readonly_fields = ('id',)
     list_display = ['title', 'lesson']
+    prepopulated_fields = {"slug": ('title',)}
     list_filter = ['lesson']
     search_fields = ['title', 'lesson']
     inlines = [ContentInline]
@@ -19,6 +21,7 @@ class ModuleAdmin(admin.ModelAdmin):
 
 class ModuleInline(admin.StackedInline):
     model=Module
+    
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
@@ -37,6 +40,7 @@ class OverviewLessonForm(forms.ModelForm):
 
 @admin.register(Lesson)
 class LessonAdmin(admin.ModelAdmin):
+    readonly_fields = ('id',)
     list_display = ['title', 'category','owner', 'created']
     list_filter = ['created', 'category']
     search_fields = ['title', 'overview']

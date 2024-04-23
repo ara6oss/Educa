@@ -54,9 +54,12 @@ class Lesson(models.Model):
 
 class Module(models.Model):
     lesson = models.ForeignKey(Lesson, related_name="modules", on_delete=models.CASCADE, verbose_name="Урок")
+    image = models.ImageField(upload_to='images/', verbose_name="Картинка")
     title = models.CharField(max_length=200, verbose_name="Название")
     description = models.TextField(blank=True, null=True, verbose_name="Описание")
-    order = OrderField(blank=True, for_fields=['course'])
+    order = OrderField(blank=True, for_fields=['lesson'])
+    slug = models.SlugField(max_length=200, verbose_name="Ссылка")
+    
     
     class Meta:
         ordering = ['order']

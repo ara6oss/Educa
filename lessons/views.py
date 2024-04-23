@@ -1,7 +1,7 @@
 from django.shortcuts import get_list_or_404, render
 from django.core.paginator import Paginator
 from lessons.utils import q_search
-from lessons.models import Lesson, Category
+from lessons.models import Lesson, Category, Module
 
 # Create your views here.
 
@@ -69,3 +69,14 @@ def course_posts(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, 'home.html', {'page_obj': page_obj})
+
+def module_detail(request, course_slug, module_slug):
+    lesson = Lesson.objects.get(slug=course_slug)
+    module = lesson.modules.get(slug=module_slug)
+    
+    context = {
+        'lesson': lesson,
+        "module": module
+    }
+    
+    return render(request, 'lessons/module.html', context)
