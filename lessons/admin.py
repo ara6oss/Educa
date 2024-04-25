@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django import forms
-from lessons.models import Category, Lesson, Module, Content
+from lessons.models import Category, Comment, Lesson, Module, Content
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 # Register your models here.
 
@@ -52,3 +52,4 @@ class LessonAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Content)
+admin.site.register(Comment)
