@@ -25,7 +25,11 @@
          <h3 class="title">top categories</h3>
          <div class="flex">
             {% for category in categories %}
-            <a href="{% url "lesson:index" category.slug %}"><span>{{category.title}}</span></a>
+            {% if category.slug == current_category.slug %}
+                <a href="{% url "lesson:index" category.slug %}" class="active"><span class="active">{{category.title}}</span></a>
+            {% else %}
+                <a href="{% url "lesson:index" category.slug %}"><span>{{category.title}}</span></a>
+            {% endif %}
             {% endfor %}
          </div>
       </div>

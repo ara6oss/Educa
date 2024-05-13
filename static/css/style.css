@@ -517,6 +517,15 @@ section{
    font-size: 1.5rem;
 }
 
+.home-grid .box-container .flex a.active {
+   background-color: #8e44ad;  /* Цвет фона для активной кнопки */
+   color: #fff;  /* Цвет текста для активной кнопки */
+}
+
+.home-grid .box-container .flex a.active span {
+   color: #fff;
+}
+
 .home-grid .box-container .flex a i{
    margin-right: 1rem;
    color:var(--black);

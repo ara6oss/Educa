@@ -42,6 +42,12 @@ def home (request, category_slug='all'):
     else:
         lessons = get_list_or_404(Lesson.objects.filter(category__slug=category_slug))
         
+    if lessons:
+        current_category=(lessons[0].category)
+        
+    else:
+        current_category=None
+        
     paginator = Paginator(lessons, 6)
     current_page = paginator.page(int(page))
     
@@ -50,6 +56,7 @@ def home (request, category_slug='all'):
         "lessons" : current_page,
         "categories":categories,
         "slug_url" : category_slug,
+        "current_category": current_category
     }
     
     return render(request, 'home.html', context)
