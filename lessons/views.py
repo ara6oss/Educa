@@ -29,29 +29,27 @@ def home (request, category_slug='all'):
     
     page = request.GET.get('page', 1)
     query = request.GET.get('q', None)
-    print("q ", query)
     
     if query:
         lessons = q_search(query)
-        print("ARAAAAAAAAAAAAA")
     
     elif category_slug == 'all':
         lessons = Lesson.objects.all() 
-        print('BABLO')
         
     else:
         lessons = get_list_or_404(Lesson.objects.filter(category__slug=category_slug))
         
-    if lessons:
-        current_category=(lessons[0].category)
+    if category_slug == 'all':
+        current_category = 'all'
         
     else:
-        current_category=None
+        current_category = (lessons[0].category)
         
     paginator = Paginator(lessons, 6)
     current_page = paginator.page(int(page))
     
     categories = Category.objects.all()
+
     context = {
         "lessons" : current_page,
         "categories":categories,
@@ -186,7 +184,6 @@ class ModuleDetailView(View):
         lesson = Lesson.objects.get(slug=course_slug)
         module = lesson.modules.get(slug=module_slug)        
         form = CommentForm(request.POST)
-
         if form.is_valid():
             new_comment = form.save(commit=False)
             new_comment.author = request.user
@@ -194,8 +191,7 @@ class ModuleDetailView(View):
             new_comment.save()
             
             form = CommentForm()
-            
-
+    
         comments = Comment.objects.filter(module=module).order_by('-created_on')
 
         context = {
@@ -206,6 +202,92 @@ class ModuleDetailView(View):
         }
 
         return render(request, 'lessons/module.html', context)
+    
+def edit_comment(request, course_slug, module_slug, comment_id):
+    if request.method == 'POST':
+        lesson = Lesson.objects.get(slug=course_slug)
+        module = lesson.modules.get(slug=module_slug)
+        comment = Comment.objects.get(pk=comment_id)
+        comment_form = CommentForm(instance=comment)
+        
+        if comment_form.is_valid():
+            comment_form.save()
+            comment_form.author = request.user
+            comment_form.module = module
+            comment_form.save()
+            
+        comments = Comment.objects.filter(module=module).order_by('-created_on')
+        
+        context = {
+            'lesson':lesson,
+            'module': module,
+            'form': comment_form,
+            'comments': comments,
+            'comment_id': comment_id,
+            'edit': True
+        }
+        return render(request, 'lessons/module.html', context)
+    
+    
+    
+def update_comment(request, course_slug, module_slug, comment_id):
+    
+    if request.method == 'POST':
+        lesson = Lesson.objects.get(slug=course_slug)
+        module = lesson.modules.get(slug=module_slug)
+        comment = Comment.objects.get(pk=comment_id)
+        comment_form = CommentForm(request.POST, instance=comment)
+        
+        if comment_form.is_valid():
+            updated_comment = comment_form.save(commit=False)  # Create a new instance but don't save it yet
+            updated_comment.author = request.user
+            updated_comment.module = module
+            updated_comment.save()  # Save the updated comment
+            
+        else:
+            comment = Comment.objects.get(pk=comment_id)
+            comment_form = CommentForm(instance=comment)
+            
+        comments = Comment.objects.filter(module=module).order_by('-created_on')
+        
+        context = {
+            'lesson':lesson,
+            'module': module,
+            'form': comment_form,
+            'comments': comments,
+            'comment_id': comment_id,
+            'edit': True
+        }
+        return render(request, 'lessons/module.html', context)
+    # if request.method == 'POST':
+    #     lesson = Lesson.objects.get(slug=course_slug)
+    #     module = lesson.modules.get(slug=module_slug)
+    #     comment = Comment.objects.get(pk=comment_id)
+    #     comment_form = CommentForm(instance=comment)
+        
+    #     if comment_form.is_valid():
+    #         new_com = comment_form.save()
+    #         new_com = comment_form.author = request.user
+    #         new_com = comment_form.module = module
+    #         new_com = comment_form.save()
+    #         comment.comment = new_com.comment
+    #         comment.save()
+    #         new_com.delete()
+    #     comments = Comment.objects.filter(module=module).order_by('-created_on')
+        
+    #     context = {
+    #         'lesson':lesson,
+    #         'module': module,
+    #         'form': comment_form,
+    #         'comments': comments,
+    #         'edit': True
+    #     }
+    #     return render(request, 'lessons/module.html', context)
+
+        
+
+            
+
 
     
     # class CommentReplyView(LoginRequiredMixin, View):
@@ -222,3 +304,5 @@ class ModuleDetailView(View):
     #             new_comment.save()
 
     #         return redirect('post-detail', pk=post_pk)
+    
+        

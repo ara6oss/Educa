@@ -27,6 +27,11 @@
             {% for category in categories %}
             {% if category.slug == current_category.slug %}
                 <a href="{% url "lesson:index" category.slug %}" class="active"><span class="active">{{category.title}}</span></a>
+
+            {% elif current_category.slug == 'all' and category.slug == 'all' %}
+
+               <a href="{% url "lesson:index" category.slug %}" class="active"><span class="active">{{category.title}}</span></a>
+
             {% else %}
                 <a href="{% url "lesson:index" category.slug %}"><span>{{category.title}}</span></a>
             {% endif %}

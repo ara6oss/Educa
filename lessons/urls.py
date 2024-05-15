@@ -9,5 +9,7 @@ urlpatterns = [
     path('course/<slug:course_slug>/<slug:module_slug>/', views.ModuleDetailView.as_view(), name='module_detail'),
     path('course/<slug:course_slug>/<slug:module_slug>/like', views.AddLike.as_view(), name='like'),
     path('course/<slug:course_slug>/<slug:module_slug>/dislike', views.AddDislike.as_view(), name='dislike'),
-    
+    path('course/<slug:course_slug>/<slug:module_slug>/edit/<int:comment_id>/', views.edit_comment, name='edit_comment'),
+    path('course/<slug:course_slug>/<slug:module_slug>/update/<int:comment_id>/', views.update_comment, name='update_comment'),
+
 ]

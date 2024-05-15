@@ -49,8 +49,13 @@
 <section class="comments">
 
    <h1 class="heading">5 comments</h1>
+   {% if edit %}
+   <form action="{% url 'lesson:update_comment' course_slug=lesson.slug module_slug=module.slug comment_id=comment_id %}" method="POST" class="add-comment">
 
-   <form action="" method="post" class="add-comment">
+   {% else %}
+   <form action="{% url 'lesson:module_detail' course_slug=lesson.slug module_slug=module.slug %}" method="post" class="add-comment">
+
+   {% endif %}
       {% csrf_token %}
       <h3>add comments</h3>
       <!-- <textarea></textarea> -->
@@ -77,14 +82,13 @@
          </div>
          <div class="comment-box">{{comment.comment}}</div>
          {% if request.user == comment.author %}
-         <form action="" class="flex-btn">
+         <form action="{% url 'lesson:edit_comment' course_slug=lesson.slug module_slug=module.slug comment_id=comment.id %}" method="POST" class="flex-btn">
+            {% csrf_token %}
             <input type="submit" value="edit comment" name="edit_comment" class="inline-option-btn">
             <input type="submit" value="delete comment" name="delete_comment" class="inline-delete-btn">
          </form>
          {% endif %}
-         <div>
-            <button class="remove-default-btn"><i class="far fa-comment-dots" onclick="commentReplyToggle('{{ comment.pk }}')"></i></button>
-        </div>
+         
         
       </div>
       {% endif %}
