@@ -95,7 +95,7 @@
          </div>
          <div class="thumb">
             <a href="{% url "lesson:course_detail" lesson.slug %}"><img src="{{ lesson.image.url }}" alt=""></a>
-            <span>10 videos</span>
+            <span>{{lesson.modules.count}} videos</span>
          </div>
          <h3 class="title">{{lesson.title}}</h3>
          <a href="{% url "lesson:course_detail" lesson.slug %}" class="inline-btn">view playlist</a>

@@ -19,8 +19,15 @@
             <span>10 videos</span>
          </div>
 
-         <form action="" method="post" class="save-playlist">
+         <form action="{% url 'lesson:save_playlist' course_slug=lesson.slug %}" method="post" class="save-playlist">
+            {% csrf_token %}
+            {% if lesson.save.exists %}
+            
+            <button type="submit"><i class="fa fa-bookmark"></i> <span>saved playlist</span></button>
+            {% else %}
             <button type="submit"><i class="far fa-bookmark"></i> <span>save playlist</span></button>
+            {% endif %}
+
          </form>
 
          

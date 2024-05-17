@@ -27,6 +27,7 @@ class Lesson(models.Model):
     slug = models.SlugField(max_length=200, unique=True, verbose_name="Ссылка")
     created = models.DateTimeField(auto_now_add=True, verbose_name="Дата создания")
     students = models.ManyToManyField(User, blank=True, related_name="lesson_joined", verbose_name="Ученики")
+    save = models.ManyToManyField(User, blank=True, related_name='save_playlist', verbose_name="AddPlaylist")
     class Meta:
         ordering = ['-created']
         

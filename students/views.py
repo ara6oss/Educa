@@ -5,14 +5,18 @@ from django.contrib.auth.views import LoginView, PasswordChangeView, PasswordRes
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
-
+from lessons.models import Comment
 from .forms import LoginForm, RegisterForm, UpdateProfileForm, UpdateUserForm
 
 # Create your views here.
 
 @login_required
 def profile(request):
-    render(request, 'studets/profile.html')
+    user_comments_count = Comment.objects.filter(author=request.user).count()
+    context = {
+        'count': user_comments_count
+    }
+    return render(request, 'students/profile.html', context)
 
 
 @login_required
@@ -34,10 +38,6 @@ def update_profile(request):
 
 
 
-
-@login_required
-def profile(request):
-    return render(request, 'students/profile.html')
 
 
 

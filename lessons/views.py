@@ -65,7 +65,6 @@ def home (request, category_slug='all'):
 
 def course_detail(request, course_slug):
     lesson = Lesson.objects.get(slug=course_slug)
-    
     context = {
         "lesson": lesson
     }
@@ -270,7 +269,32 @@ def delete_comment(request, course_slug, module_slug, comment_id):
     comment = Comment.objects.get(pk=comment_id)
     comment.delete()
     return redirect(reverse('lesson:module_detail', args=[course_slug, module_slug]))
-    # return redirect('module_detail', course_slug=course_slug, module_slug=module_slug)
+
+class AddSave(LoginRequiredMixin, View):
+    
+    def get(self, request, course_slug):
+        lesson = get_object_or_404(Lesson, slug=course_slug)
+        context = {
+            'lesson': lesson
+        }
+        
+        return render(request, 'lessons/playlist.html', context)
+    
+    def post(self, request, course_slug):
+        lesson = get_object_or_404(Lesson, slug=course_slug)
+        if lesson.save.filter(id=request.user.id).exists():
+            lesson.save.remove(request.user)
+        else:
+            lesson.save.add(request.user)
+        
+        context = {
+            'lesson': lesson
+        }
+        # return redirect(request.META.get('HTTP_REFERER', '/'))
+        return render(request, 'lessons/playlist.html', context )
+        
+    
+    
         
     
     # if request.method == 'POST':
