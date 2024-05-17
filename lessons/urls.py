@@ -11,5 +11,7 @@ urlpatterns = [
     path('course/<slug:course_slug>/<slug:module_slug>/dislike', views.AddDislike.as_view(), name='dislike'),
     path('course/<slug:course_slug>/<slug:module_slug>/edit/<int:comment_id>/', views.edit_comment, name='edit_comment'),
     path('course/<slug:course_slug>/<slug:module_slug>/update/<int:comment_id>/', views.update_comment, name='update_comment'),
+    path('course/<slug:course_slug>/<slug:module_slug>/delete/<int:comment_id>/', views.delete_comment, name='delete_comment'),
+    
 
 ]

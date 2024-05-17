@@ -1,5 +1,6 @@
 from django.shortcuts import get_list_or_404, get_object_or_404, render
 from django.core.paginator import Paginator
+from django.urls import reverse
 from lessons.forms import CommentForm
 from lessons.utils import q_search
 from lessons.models import Lesson, Category, Module, Comment
@@ -231,6 +232,7 @@ def edit_comment(request, course_slug, module_slug, comment_id):
     
     
 def update_comment(request, course_slug, module_slug, comment_id):
+    action = request.POST.get('action')
     
     if request.method == 'POST':
         lesson = Lesson.objects.get(slug=course_slug)
@@ -238,18 +240,20 @@ def update_comment(request, course_slug, module_slug, comment_id):
         comment = Comment.objects.get(pk=comment_id)
         comment_form = CommentForm(request.POST, instance=comment)
         
+        
+        
         if comment_form.is_valid():
-            updated_comment = comment_form.save(commit=False)  # Create a new instance but don't save it yet
             updated_comment.author = request.user
+            updated_comment = comment_form.save(commit=False)  # Create a new instance but don't save it yet
             updated_comment.module = module
             updated_comment.save()  # Save the updated comment
-            
+        
         else:
             comment = Comment.objects.get(pk=comment_id)
             comment_form = CommentForm(instance=comment)
-            
-        comments = Comment.objects.filter(module=module).order_by('-created_on')
         
+        comments = Comment.objects.filter(module=module).order_by('-created_on')
+    
         context = {
             'lesson':lesson,
             'module': module,
@@ -259,6 +263,16 @@ def update_comment(request, course_slug, module_slug, comment_id):
             'edit': True
         }
         return render(request, 'lessons/module.html', context)
+        
+            
+    
+def delete_comment(request, course_slug, module_slug, comment_id):
+    comment = Comment.objects.get(pk=comment_id)
+    comment.delete()
+    return redirect(reverse('lesson:module_detail', args=[course_slug, module_slug]))
+    # return redirect('module_detail', course_slug=course_slug, module_slug=module_slug)
+        
+    
     # if request.method == 'POST':
     #     lesson = Lesson.objects.get(slug=course_slug)
     #     module = lesson.modules.get(slug=module_slug)

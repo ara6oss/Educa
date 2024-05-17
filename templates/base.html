@@ -65,7 +65,7 @@
    <div class="profile">
       <a href="{% url 'profile' %}"><img src="{{ user.profile.image.url }}" class="image" alt=""></a>
       <h3 class="name">{{user.first_name}} {{user.last_name}}</h3>
-      <p class="role">studen1</p>
+      <p class="role">{{user.username}}</p>
       <a href="{% url 'profile' %}" class="btn">view profile</a>
    </div>
 

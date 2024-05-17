@@ -48,21 +48,23 @@
 
 <section class="comments">
 
-   <h1 class="heading">5 comments</h1>
+   <h1 class="heading">{{comments.count}} comments</h1>
    {% if edit %}
-   <form action="{% url 'lesson:update_comment' course_slug=lesson.slug module_slug=module.slug comment_id=comment_id %}" method="POST" class="add-comment">
+      <form action="{% url 'lesson:update_comment' course_slug=lesson.slug module_slug=module.slug comment_id=comment_id %}" method="POST" class="add-comment">
 
    {% else %}
-   <form action="{% url 'lesson:module_detail' course_slug=lesson.slug module_slug=module.slug %}" method="post" class="add-comment">
+      {% if user.is_authenticated %}
+         <form action="{% url 'lesson:module_detail' course_slug=lesson.slug module_slug=module.slug %}" method="post" class="add-comment">
 
+            {% csrf_token %}
+            <h3>add comments</h3>
+            <!-- <textarea></textarea> -->
+            {{ form.comment }}
+            <!-- <textarea name="comment_box" placeholder="enter your comment" required maxlength="1000" cols="30" rows="10"></textarea> -->
+            <input type="submit" value="add comment" class="inline-btn" name="add_comment">
+         </form>
+      {% endif %}
    {% endif %}
-      {% csrf_token %}
-      <h3>add comments</h3>
-      <!-- <textarea></textarea> -->
-      {{ form.comment }}
-      <!-- <textarea name="comment_box" placeholder="enter your comment" required maxlength="1000" cols="30" rows="10"></textarea> -->
-      <input type="submit" value="add comment" class="inline-btn" name="add_comment">
-   </form>
 
    <h1 class="heading">user comments</h1>
 
@@ -81,12 +83,20 @@
             </div>
          </div>
          <div class="comment-box">{{comment.comment}}</div>
+         
          {% if request.user == comment.author %}
-         <form action="{% url 'lesson:edit_comment' course_slug=lesson.slug module_slug=module.slug comment_id=comment.id %}" method="POST" class="flex-btn">
-            {% csrf_token %}
-            <input type="submit" value="edit comment" name="edit_comment" class="inline-option-btn">
-            <input type="submit" value="delete comment" name="delete_comment" class="inline-delete-btn">
-         </form>
+         
+            <div class="flex-btn">
+               <form action="{% url 'lesson:edit_comment' course_slug=lesson.slug module_slug=module.slug comment_id=comment.id %}" method="POST">
+                  {% csrf_token %}
+                  <input type="submit" value="edit comment" name="edit_comment" class="inline-option-btn">
+               </form>
+               <form action="{% url 'lesson:delete_comment' course_slug=lesson.slug module_slug=module.slug comment_id=comment.id %}" method="">
+                  {% csrf_token %}
+                  <input type="submit" value="delete comment" name="delete_comment" class="inline-delete-btn">
+               </form>
+            </div>
+
          {% endif %}
          
         
