@@ -30,7 +30,6 @@ SECRET_KEY = str(os.getenv('secret_key'))
 DEBUG = True
 
 ALLOWED_HOSTS = [
-# "d17e-176-98-241-170.ngrok-free.app"
 ]
 
 

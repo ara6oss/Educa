@@ -21,10 +21,12 @@ class ModuleAdmin(admin.ModelAdmin):
 
 class ModuleInline(admin.StackedInline):
     model=Module
+    prepopulated_fields = {"slug": ('title',)}
     
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
+    readonly_fields = ('id',)
     list_display = ['title', 'slug']
     prepopulated_fields = {"slug": ('title',)}
     
@@ -35,9 +37,20 @@ class OverviewLessonForm(forms.ModelForm):
     class Meta:
         model = Lesson
         fields = '__all__'
+
+class LessonAdminForm(forms.ModelForm):
+    class Meta:
+        model = Lesson
+        fields = '__all__'
+
+    def save(self, commit=True):
+        instance = super().save(commit=False)
+        # Сначала сохраняем объект, чтобы получить значение id
+        if commit:
+            instance.save()
+            self.save_m2m()  # Сохраняем многие ко многим связи
+        return instance
     
-
-
 @admin.register(Lesson)
 class LessonAdmin(admin.ModelAdmin):
     readonly_fields = ('id',)
@@ -47,8 +60,6 @@ class LessonAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     form = OverviewLessonForm
     inlines = [ModuleInline]
-    
-    
 
 
 admin.site.register(Content)
