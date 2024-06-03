@@ -16,13 +16,12 @@
    
          <div class="thumb">
             <img src="{{ lesson.image.url }}" alt="">
-            <span>10 videos</span>
+            <span>{{lesson.modules.count}} videos</span>
          </div>
 
          <form action="{% url 'lesson:save_playlist' course_slug=lesson.slug %}" method="post" class="save-playlist">
             {% csrf_token %}
             {% if lesson.save.exists %}
-            
             <button type="submit"><i class="fa fa-bookmark"></i> <span>saved playlist</span></button>
             {% else %}
             <button type="submit"><i class="far fa-bookmark"></i> <span>save playlist</span></button>
@@ -34,10 +33,18 @@
       </div>
       <div class="column">
          <div class="tutor">
-            <img src="{{ lesson.owner.profile.image.url }}" alt="">
+               {% if request.user.pk != lesson.owner.pk %}
+                  <a href="{% url 'owner_profile' pk=lesson.owner.pk %}"><img src="{{ lesson.owner.profile.image.url }}" alt=""></a>
+               {% else %}
+                  <a href="{% url 'profile' %}"><img src="{{ lesson.owner.profile.image.url }}" alt=""></a>
+               {% endif %}
 
             <div>
-               <h3>{{lesson.owner.first_name}} {{lesson.owner.last_name}}</h3>
+               {% if request.user.pk != lesson.owner.pk %}
+                  <a href="{% url 'owner_profile' pk=lesson.owner.pk %}"><h3>{{lesson.owner.first_name}} {{lesson.owner.last_name}}</h3></a>
+               {% else %}
+                  <a href="{% url 'profile' %}"><h3>{{lesson.owner.first_name}} {{lesson.owner.last_name}}</h3></a>
+               {% endif %}
                <span>{{lesson.owner}}</span>
                <br>
                <span>{{lesson.created|date:"d-m-Y"}}</span>
@@ -47,7 +54,11 @@
          <div class="details">
             <h3>{{lesson.title}}</h3>
             <p>{{lesson.overview|safe}}</p> <!-- |linebreaksbr -->
-            <a href="teacher_profile.html" class="inline-btn">view profile</a>
+            {% if request.user.pk != lesson.owner.pk %}
+            <a href="{% url 'owner_profile' pk=lesson.owner.pk %}" class="inline-btn">view profile</a>
+            {% else %}
+            <a href="{% url 'profile' %}" class="inline-btn">view profile</a>
+            {% endif %}
 
          </div>
       </div>

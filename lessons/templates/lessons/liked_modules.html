@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} <title>Liked List</title> {% endblock %} 
+
+{% block content %}
+
+
+
+<section class="playlist-videos">
+
+    <h1 class="heading">Liked Videos</h1>
+ 
+    <div class="box-container">
+ 
+       {% for module in modules %}
+       <a class="box" href="{% url "lesson:module_detail" course_slug=module.lesson.slug module_slug=module.slug  %}">
+          <i class="fas fa-play"></i>
+          <img src="{{ module.image.url }}" alt="">
+          <h3>{{ module.title }}</h3>
+       </a>
+       {% endfor %}
+ 
+    </div>
+ 
+ </section>
+ 
+
+
+ {% endblock %}
+
+
+
+
+
+
+
+
+

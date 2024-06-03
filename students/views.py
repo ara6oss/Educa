@@ -35,6 +35,18 @@ def update_profile(request):
         profile_form = UpdateProfileForm(instance=request.user.profile)
     return render(request, 'students/update.html', {'user_form': user_form, 'profile_form': profile_form})
 
+from django.contrib.auth.models import User
+
+def owner_profile(request, pk):
+    if request.method == 'GET':
+        owner = User.objects.get(pk=pk)
+        user_comments_count = Comment.objects.filter(author=owner).count()
+        context = {
+        'owner': owner,
+        'count': user_comments_count
+        }
+        return render(request, 'students/owner_profile.html', context)        
+
 
 
 

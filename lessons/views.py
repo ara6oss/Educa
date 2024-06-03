@@ -8,6 +8,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import View
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 # def home (request):
@@ -28,6 +29,10 @@ from django.shortcuts import redirect
 
 def home (request, category_slug='all'):
     
+    if request.user.is_authenticated:
+        user_comments_count = Comment.objects.filter(author=request.user).count()
+    else:
+        user_comments_count = 0
     page = request.GET.get('page', 1)
     query = request.GET.get('q', None)
     
@@ -55,11 +60,14 @@ def home (request, category_slug='all'):
         "lessons" : current_page,
         "categories":categories,
         "slug_url" : category_slug,
-        "current_category": current_category
+        "current_category": current_category,
+        "count": user_comments_count
     }
     
     return render(request, 'home.html', context)
 
+def about(request):
+    return render(request, 'about.html')
 
 
 
@@ -292,6 +300,17 @@ class AddSave(LoginRequiredMixin, View):
         }
         # return redirect(request.META.get('HTTP_REFERER', '/'))
         return render(request, 'lessons/playlist.html', context )
+    
+@login_required
+def liked_modules(request):
+    if request.method == 'GET':
+        user = request.user
+        modules = Module.objects.filter(likes=user) 
+        context = {
+            'modules': modules  
+        }
+        
+        return render(request, 'lessons/liked_modules.html', context)
         
     
     

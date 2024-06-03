@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} <title>Profile</title> {% endblock %}
+
+
+{% block content %}
+<section class="user-profile">
+
+   <h1 class="heading">your profile</h1>
+
+   <div class="info">
+
+      <div class="user">
+         <img src="{{ owner.profile.image.url }}" alt="">
+         <h3>{{user.first_name}} {{user.last_name}}</h3>
+         <p>{{owner.username}}</p>
+         <!-- <a href="{% url 'update_profile' %}" class="inline-btn">update profile</a> -->
+      </div>
+      <div class="box-container">
+   
+         <div class="box">
+            <div class="flex">
+               <i class="fas fa-bookmark"></i>
+               <div>
+                  <span>{{owner.save_playlist.count}}</span>
+                  <p>saved playlist</p>
+               </div>
+            </div>
+            <a href="#" class="inline-btn">view playlists</a>
+         </div>
+   
+         <div class="box">
+            <div class="flex">
+               <i class="fas fa-heart"></i>
+               <div>
+                  <span>{{owner.likes.count}}</span>
+                  <p>videos liked</p>
+               </div>
+            </div>
+            <a href="#" class="inline-btn">view liked</a>
+         </div>
+   
+         <div class="box">
+            <div class="flex">
+               <i class="fas fa-comment"></i>
+               <div>
+                  <span>{{count}}</span>
+                  <p>videos comments</p>
+               </div>
+            </div>
+            <a href="#" class="inline-btn">view comments</a>
+         </div>
+   
+      </div>
+   </div>
+
+</section>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+

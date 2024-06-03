@@ -25,11 +25,13 @@ from lessons.views import *
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", home, name='home'),
+    path("about/", about, name='about'),
     path("register/", RegisterView.as_view(), name='register'),
     path("login/", CustomLoginView.as_view(), name='login'),
     path("logout/", auth_views.LogoutView.as_view(template_name='students/logout.html'), name='logout'),
     path('social-auth/', include('social_django.urls', namespace='social')),
     path('profile/', profile, name='profile'),
+    path('profile/<int:pk>', owner_profile, name='owner_profile'),
     path('password-reset/', ResetPasswordView.as_view(), name='password_reset'),
     path('password-reset-confirm/<uidb64>/<token>/',
          auth_views.PasswordResetConfirmView.as_view(template_name='students/password_reset_confirm.html'),

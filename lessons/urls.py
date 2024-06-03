@@ -4,6 +4,7 @@ from lessons import views
 app_name = 'lessons'
 urlpatterns = [
     path('search/', views.home, name='search'),
+    path('course/liked_modules/', views.liked_modules, name='liked_modules'),
     path('<slug:category_slug>', views.home, name='index'),
     path('course/<slug:course_slug>/', views.course_detail, name='course_detail'),
     path('course/<slug:course_slug>/save', views.AddSave.as_view(), name='save_playlist'),

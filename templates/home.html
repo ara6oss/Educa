@@ -11,15 +11,18 @@
 
    <div class="box-container">
 
+      {% if user.is_authenticated %}
       <div class="box">
          <h3 class="title">likes and comments</h3>
-         <p class="likes">total likes : <span>25</span></p>
-         <a href="#" class="inline-btn">view likes</a>
-         <p class="likes">total comments : <span>12</span></p>
+         <p class="likes">total likes : <span>{{user.likes.count}}</span></p>
+         <a href="{% url "lesson:liked_modules"  %}" method="GET" class="inline-btn">view likes</a>
+         <p class="likes">total comments : <span>{{count}}</span></p>
          <a href="#" class="inline-btn">view comments</a>
-         <p class="likes">saved playlists : <span>4</span></p>
+         <p class="likes">saved playlists : <span>{{user.save_playlist.count}}</span></p>
          <a href="#" class="inline-btn">view playlists</a>
       </div>
+      {% endif %}
+      
 
       <div class="box">
          <h3 class="title">top categories</h3>
