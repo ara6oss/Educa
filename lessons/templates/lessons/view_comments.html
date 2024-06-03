@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} <title>Comments View</title> {% endblock %} 
+
+{% block content %}
+
+<section class="comments">
+
+<h1 class="heading">user comments</h1>
+
+   
+
+   <div class="box-container">
+      {% for comment in comments %}
+      {% if comment.is_parent %}
+
+      <div class="box">
+         <div class="user">
+            <img src="{{comment.author.profile.image.url}}" alt="">
+            <div>
+               <h3>{{comment.author.username}}</h3>
+               <span>{{comment.created_on|date:"d-m-Y"}}</span>
+            </div>
+         </div>
+         <div class="comment-box">{{comment.comment}}</div>
+         
+         {% if request.user == comment.author %}
+         
+            <div class="flex-btn">
+               <form action="{% url "lesson:module_detail" course_slug=comment.module.lesson.slug module_slug=comment.module.slug  %}" method="POST">
+                  {% csrf_token %}
+                  <input type="submit" value="Link to Comment" name="edit_comment" class="inline-option-btn">
+               </form>
+            </div>
+
+         {% endif %}
+         
+        
+      </div>
+      {% endif %}
+      {% endfor %}
+      
+   </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+{% endblock %}

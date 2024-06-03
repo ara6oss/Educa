@@ -9,6 +9,7 @@ from django.views import View
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 # Create your views here.
 
 # def home (request):
@@ -173,6 +174,7 @@ class AddDislike(LoginRequiredMixin, View):
         return redirect(request.META.get('HTTP_REFERER', '/'))
     
 
+
 class ModuleDetailView(View):
     def get(self, request, course_slug, module_slug):
         lesson = Lesson.objects.get(slug=course_slug)
@@ -188,6 +190,7 @@ class ModuleDetailView(View):
         }
         return render(request, 'lessons/module.html', context)
     
+    @method_decorator(login_required)
     def post(self, request, course_slug, module_slug, *args, **kwargs):
         lesson = Lesson.objects.get(slug=course_slug)
         module = lesson.modules.get(slug=module_slug)        
@@ -239,7 +242,7 @@ def edit_comment(request, course_slug, module_slug, comment_id):
     
     
 def update_comment(request, course_slug, module_slug, comment_id):
-    action = request.POST.get('action')
+    
     
     if request.method == 'POST':
         lesson = Lesson.objects.get(slug=course_slug)
@@ -250,8 +253,8 @@ def update_comment(request, course_slug, module_slug, comment_id):
         
         
         if comment_form.is_valid():
-            updated_comment.author = request.user
             updated_comment = comment_form.save(commit=False)  # Create a new instance but don't save it yet
+            updated_comment.author = request.user
             updated_comment.module = module
             updated_comment.save()  # Save the updated comment
         
@@ -269,7 +272,7 @@ def update_comment(request, course_slug, module_slug, comment_id):
             'comment_id': comment_id,
             'edit': True
         }
-        return render(request, 'lessons/module.html', context)
+        return redirect(reverse('lesson:module_detail', args=[course_slug, module_slug]))
         
             
     
@@ -312,6 +315,16 @@ def liked_modules(request):
         
         return render(request, 'lessons/liked_modules.html', context)
         
+def view_comments(request):
+    
+    user = request.user
+    comments = Comment.objects.filter(author=user)
+    
+    context = {
+        'comments': comments
+    }
+    
+    return render(request, 'lessons/view_comments.html', context)     
     
     
         
