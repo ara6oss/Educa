@@ -19,7 +19,7 @@
          <p class="likes">total comments : <span>{{count}}</span></p>
          <a href="{% url "lesson:view_comments"  %}" class="inline-btn">view comments</a>
          <p class="likes">saved playlists : <span>{{user.save_playlist.count}}</span></p>
-         <a href="#" class="inline-btn">view playlists</a>
+         <a href="{% url "lesson:saved_playlists"  %}" class="inline-btn">view playlists</a>
       </div>
       {% endif %}
       

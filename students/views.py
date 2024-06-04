@@ -5,7 +5,8 @@ from django.contrib.auth.views import LoginView, PasswordChangeView, PasswordRes
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
-from lessons.models import Comment
+from students.models import Profile
+from lessons.models import Comment, Lesson
 from .forms import LoginForm, RegisterForm, UpdateProfileForm, UpdateUserForm
 
 # Create your views here.
@@ -116,3 +117,38 @@ class ChangePasswordView(SuccessMessageMixin, PasswordChangeView):
     template_name = 'students/change_password.html'
     success_message = "Successfully Changed Your Password"
     success_url = reverse_lazy('home')
+    
+    
+def teachers_profile(request):
+    teachers = Profile.objects.filter(status='teacher')
+    lessons = Lesson.objects.all()
+    #найти уроки по пользователю который в teachers и передать через словарь
+    
+    teacher_lesson_counts = {
+        teacher.user.id: Lesson.objects.filter(owner=teacher.user).count()
+        for teacher in teachers
+    }
+    teacher_module_counts = {}
+
+    for teacher in teachers:
+        # Find lessons taught by the current teacher
+        lessons_taught = Lesson.objects.filter(owner=teacher.user)
+        
+        # Calculate the total module count for the current teacher
+        total_module_count = sum(lesson.modules.count() for lesson in lessons_taught)
+        
+        # Store the total module count in the dictionary
+        teacher_module_counts[teacher.user.id] = total_module_count
+        
+        
+        #TODO to finish
+        total_likes_count = sum(module.likes.count() for lesson in lessons_taught for module in lesson.modules.all())
+    
+    
+    context = {
+        "teachers": teachers,
+        "lessons": lessons,
+        "teacher_lesson_counts": teacher_lesson_counts,
+        "teacher_module_counts": teacher_module_counts
+    }
+    return render(request, "teachers.html", context)

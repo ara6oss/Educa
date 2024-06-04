@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from .fields import OrderField
 from PIL import Image
 from django.utils import timezone
+from embed_video.fields import EmbedVideoField
 # Create your models here.
 
 class Category(models.Model):
@@ -27,7 +28,7 @@ class Lesson(models.Model):
     slug = models.SlugField(max_length=200, unique=True, verbose_name="Ссылка")
     created = models.DateTimeField(auto_now_add=True, verbose_name="Дата создания")
     students = models.ManyToManyField(User, blank=True, related_name="lesson_joined", verbose_name="Ученики")
-    # save = models.ManyToManyField(User, blank=True, related_name='save_playlist', verbose_name="AddPlaylist") потом Добавить в конце.
+    # save = models.ManyToManyField(User, blank=True, related_name='save_playlist', verbose_name="AddPlaylist")
     class Meta:
         ordering = ['-created']
         
@@ -63,6 +64,7 @@ class Module(models.Model):
     slug = models.SlugField(max_length=200, verbose_name="Ссылка")
     likes = models.ManyToManyField(User, blank=True, related_name='likes')
     dislikes = models.ManyToManyField(User, blank=True, related_name='dislikes')
+    youtube = EmbedVideoField()
     
     class Meta:
         ordering = ['order']

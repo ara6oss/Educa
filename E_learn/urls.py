@@ -31,6 +31,7 @@ urlpatterns = [
     path("logout/", auth_views.LogoutView.as_view(template_name='students/logout.html'), name='logout'),
     path('social-auth/', include('social_django.urls', namespace='social')),
     path('profile/', profile, name='profile'),
+    path('teachers_profile/', teachers_profile, name='teachers_profile'),
     path('profile/<int:pk>', owner_profile, name='owner_profile'),
     path('password-reset/', ResetPasswordView.as_view(), name='password_reset'),
     path('password-reset-confirm/<uidb64>/<token>/',

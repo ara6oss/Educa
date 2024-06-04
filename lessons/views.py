@@ -324,7 +324,16 @@ def view_comments(request):
         'comments': comments
     }
     
-    return render(request, 'lessons/view_comments.html', context)     
+    return render(request, 'lessons/view_comments.html', context)
+
+def saved_playlists(request):
+    
+    lessons = Lesson.objects.filter(save=request.user)
+    
+    context = {
+        'lessons': lessons
+    } 
+    return render(request, 'lessons/saved_playlists.html', context)
     
     
         

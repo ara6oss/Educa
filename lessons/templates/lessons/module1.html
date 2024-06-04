@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-{% load embed_video_tags %}
 {% block title %} <title>Module</title> {% endblock %}
 {% block content %}
 
@@ -8,11 +7,7 @@
 
    <div class="video-container">
       <div class="video">
-         <!-- <video src="images/vid-1.mp4" controls poster="{{module.image.url}}" id="video"></video> -->
-         
-            {% video module.youtube as youtube %}
-                <iframe width="560" height="315" src="{{ youtube.url }}" frameborder="0" allowfullscreen></iframe>
-            {% endvideo %}
+         <video src="images/vid-1.mp4" controls poster="{{module.image.url}}" id="video"></video>
       </div>
       <h3 class="title">{{module.title}}</h3>
       <div class="info">
@@ -58,8 +53,9 @@
       <form action="{% url 'lesson:update_comment' course_slug=lesson.slug module_slug=module.slug comment_id=comment_id %}" method="POST" class="add-comment">
 
    {% else %}
+      {% if user.is_authenticated %}
          <form action="{% url 'lesson:module_detail' course_slug=lesson.slug module_slug=module.slug %}" method="post" class="add-comment">
-            {% endif %}
+
             {% csrf_token %}
             <h3>add comments</h3>
             <!-- <textarea></textarea> -->
@@ -67,6 +63,8 @@
             <!-- <textarea name="comment_box" placeholder="enter your comment" required maxlength="1000" cols="30" rows="10"></textarea> -->
             <input type="submit" value="add comment" class="inline-btn" name="add_comment">
          </form>
+      {% endif %}
+   {% endif %}
 
    <h1 class="heading">user comments</h1>
 

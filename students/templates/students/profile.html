@@ -27,7 +27,7 @@
                   <p>saved playlist</p>
                </div>
             </div>
-            <a href="#" class="inline-btn">view playlists</a>
+            <a href="{% url "lesson:saved_playlists"  %}" class="inline-btn">view playlists</a>
          </div>
    
          <div class="box">
@@ -38,7 +38,7 @@
                   <p>videos liked</p>
                </div>
             </div>
-            <a href="#" class="inline-btn">view liked</a>
+            <a href="{% url "lesson:liked_modules"  %}" class="inline-btn">view liked</a>
          </div>
    
          <div class="box">
@@ -49,7 +49,7 @@
                   <p>videos comments</p>
                </div>
             </div>
-            <a href="#" class="inline-btn">view comments</a>
+            <a href="{% url "lesson:view_comments"  %}" class="inline-btn">view comments</a>
          </div>
    
       </div>

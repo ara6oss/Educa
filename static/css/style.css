@@ -922,6 +922,12 @@ section{
    object-fit: contain;
    background-color: #000;
 }
+.watch-video .video-container .video iframe{
+   border-radius: .5rem;
+   width: 100%;
+   object-fit: contain;
+   background-color: #000;
+}
 
 .watch-video .video-container .title{
    font-size: 2rem;
