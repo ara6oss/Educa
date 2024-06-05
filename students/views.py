@@ -119,7 +119,7 @@ class ChangePasswordView(SuccessMessageMixin, PasswordChangeView):
     success_url = reverse_lazy('home')
     
     
-def teachers_profile(request):
+def teachers_profile1(request):
     teachers = Profile.objects.filter(status='teacher')
     lessons = Lesson.objects.all()
     #найти уроки по пользователю который в teachers и передать через словарь
@@ -152,3 +152,50 @@ def teachers_profile(request):
         "teacher_module_counts": teacher_module_counts
     }
     return render(request, "teachers.html", context)
+
+
+def teachers(request):
+    teachers = Profile.objects.filter(status='teacher')
+    
+    # Initialize an empty dictionary to store various counts for each teacher
+    teacher_counts = {}
+
+    for teacher in teachers:
+        # Find lessons taught by the current teacher
+        lessons_taught = Lesson.objects.filter(owner=teacher.user)
+        
+        # Calculate the total counts for the current teacher
+        total_lesson_count = lessons_taught.count()
+        total_module_count = sum(lesson.modules.count() for lesson in lessons_taught)
+        total_likes_count = sum(module.likes.count() for lesson in lessons_taught for module in lesson.modules.all())
+        
+        # Store the counts in the dictionary
+        teacher_counts[teacher.user.id] = {
+            'total_lesson_count': total_lesson_count,
+            'total_module_count': total_module_count,
+            'total_likes_count': total_likes_count
+        }
+    
+    context = {
+        "teachers": teachers,
+        "teacher_counts": teacher_counts
+    }
+    return render(request, "teachers.html", context)
+
+def teacher_profile(request, id):
+    user = User.objects.get(pk=id)
+    teacher = Profile.objects.get(user=user)
+    lessons = Lesson.objects.filter(owner=user)
+    total_lesson_count = lessons.count()
+    total_module_count = sum(lesson.modules.count() for lesson in lessons)
+    total_likes_count = sum(module.likes.count() for lesson in lessons for module in lesson.modules.all())
+    total_comment_count = sum(Comment.objects.filter(module=module).count() for lesson in lessons for module in lesson.modules.all())
+    context = {
+        'teacher': teacher,
+        'lessons': lessons,
+        'total_lesson_count': total_lesson_count,
+        'total_module_count': total_module_count,
+        'total_likes_count': total_likes_count,
+        'total_comment_count': total_comment_count
+    }
+    return render(request, 'students/teacher_profile.html', context)

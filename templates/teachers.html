@@ -20,7 +20,7 @@
       <div class="box offer">
          <h3>become a tutor</h3>
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, itaque ipsam fuga ex et aliquam.</p>
-         <a href="register.html" class="inline-btn">get started</a>
+         <a href="{% url 'register' %}" class="inline-btn">get started</a>
       </div>
 
       {% for teacher in teachers %}
@@ -32,10 +32,10 @@
                <span>{{teacher.user.username}}</span>
             </div>
          </div>
-         <p>total playlists : <span>{{teacher_lesson_counts|default_if_none:0|get_item:teacher.user.id}}</span></p>
-         <p>total videos : <span>{{ teacher_module_counts|default_if_none:0|get_item:teacher.user.id }}</span></p>
-         <p>total likes : <span>1208</span></p>
-         <a href="teacher_profile.html" class="inline-btn">view profile</a>
+         <p>total playlists : <span>{{teacher_counts|get_item:teacher.user.id|get_item:'total_lesson_count'}}</span></p>
+         <p>total videos : <span>{{ teacher_counts|get_item:teacher.user.id|get_item:'total_module_count' }}</span></p>
+         <p>total likes : <span>{{ teacher_counts|get_item:teacher.user.id|get_item:'total_likes_count' }}</span></p>
+         <a href="{% url "teacher_profile" teacher.user.pk %}" class="inline-btn">view profile</a>
       </div>
 
       {% endfor %}
