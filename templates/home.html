@@ -88,9 +88,9 @@
 
       <div class="box">
          <div class="tutor">
-            <img src="{{ lesson.owner.profile.image.url }}" alt="{{lesson.owner}}">
+            <a href="{% url "teacher_profile" lesson.owner.pk %}"><img src="{{ lesson.owner.profile.image.url }}" alt="{{lesson.owner}}"></a>
             <div class="info">
-               <h3>{{lesson.owner.first_name}} {{lesson.owner.last_name}}</h3>
+               <a href="{% url "teacher_profile" lesson.owner.pk %}"><h3>{{lesson.owner.first_name}} {{lesson.owner.last_name}}</h3></a>
                <span>{{lesson.owner}}</span>
                <br>
                <span>{{lesson.created|date:"d-m-Y"}}</span>

@@ -26,9 +26,9 @@
       {% for teacher in teachers %}
       <div class="box">
          <div class="tutor">
-            <img src="{{teacher.image.url}}" alt="">
+            <a href="{% url "teacher_profile" teacher.user.pk %}"><img src="{{teacher.image.url}}" alt=""></a>
             <div>
-               <h3>{{teacher.user.first_name}} {{teacher.user.last_name}}</h3>
+               <a href="{% url "teacher_profile" teacher.user.pk %}"><h3>{{teacher.user.first_name}} {{teacher.user.last_name}}</h3></a>
                <span>{{teacher.user.username}}</span>
             </div>
          </div>
