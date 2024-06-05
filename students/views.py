@@ -199,3 +199,10 @@ def teacher_profile(request, id):
         'total_comment_count': total_comment_count
     }
     return render(request, 'students/teacher_profile.html', context)
+
+def courses(request):
+    lessons = Lesson.objects.all()
+    context = {
+        'lessons': lessons
+    }
+    return render(request, 'courses.html', context)
